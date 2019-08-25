@@ -64,12 +64,12 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://roamgom.github.io/images/post/2018-02-11/tensorflow.png">
 <meta property="og:image" content="https://roamgom.github.io/images/post/2018-02-11/tensorflow_md.png">
-<meta property="og:image" content="https://roamgom.github.io/assets/img/roamgom.jpg">
-<meta property="og:image" content="https://roamgom.github.io/assets/img/roamgom.jpg">
+<meta property="og:image" content="https://roamgom.github.io/images/roamgom.jpg">
+<meta property="og:image" content="https://roamgom.github.io/images/roamgom.jpg">
 <meta property="og:image" content="https://roamgom.github.io/images/post/2018-02-11/typora.gif">
 <meta property="og:image" content="https://roamgom.github.io/images/post/2018-02-11/typora_about.png">
 <meta property="og:image" content="https://roamgom.github.io/images/post/2018-02-11/typora_type.gif">
-<meta property="og:updated_time" content="2019-08-25T06:10:48.381Z">
+<meta property="og:updated_time" content="2019-08-25T08:39:45.019Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown 작성하기">
 <meta name="twitter:description" content="Markdown 작성하기마크다운이란?Github, Github Pages에서 보는 README를 보면 모두 .md 또는 .markdown 파일명으로 써져 있는걸 알 수 있습니다. 주로 기술 블로그 포스팅이나 프로젝트에 대한 설명을 써놓는게 대부분인데 특수기호, 문자를 이용하여 매우 간단한 문법으로 웹에서 빠른 컨텐츠 작성이 가능하죠. Github 덕분이라">
@@ -255,7 +255,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-25 15:10:48" itemprop="dateModified" datetime="2019-08-25T15:10:48+09:00">2019-08-25</time>
+                <time title="Modified: 2019-08-25 17:39:45" itemprop="dateModified" datetime="2019-08-25T17:39:45+09:00">2019-08-25</time>
               </span>
             
           
@@ -450,18 +450,15 @@
 <p>코드 문맥, 블럭</p>
 </blockquote>
 <p>탭(Tab) 1개 또는 공백 4개를 사용합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">​</span><br></pre></td></tr></table></figure>
+<p>문맥과 코드는 원하는 부분을 ` 3개를 앞 뒤에 붙여 줍니다.</p>
+<p>코드 같은 경우, 앞의 `3개 뒤에 언어를 써주면 자동 syntax 처리가 됩니다.</p>
+<p><code>파일명 블럭</code> 또는 <code>변수명 블럭</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">코드 블럭</span><br><span class="line">여러 줄 입력 가능</span><br></pre></td></tr></table></figure>
 
-<p>여러개의<br>코드 문맥<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`파일명 블럭` 또는 `변수명 블럭`</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">여러개의</span><br><span class="line">코드 문맥</span><br></pre></td></tr></table></figure>
-
-<p><code>파일명 블럭</code> 또는 <code>변수명 블럭</code></p>
 <blockquote>
 <p>언어 별 코드</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">​```python</span><br><span class="line">def hola():</span><br><span class="line">    print(&quot;Hola!&quot;)</span><br><span class="line">hola()</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```python</span><br><span class="line">def hola():</span><br><span class="line">    print(&quot;Hola!&quot;)</span><br><span class="line">hola()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hola</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hola!"</span>)</span><br><span class="line">hola()</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
 
 <p><br><br></p>
 <h4 id="URL-링크"><a href="#URL-링크" class="headerlink" title="URL 링크"></a>URL 링크</h4><blockquote>
@@ -482,7 +479,7 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![이미지 설명](/경로/이미지.jpg)</span><br></pre></td></tr></table></figure>
 
-<img src="/assets/img/roamgom.jpg">
+<img src="/images/roamgom.jpg">
 
 
 
@@ -491,7 +488,7 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;/경로/이미지.jpg&quot; width=&quot;가로&quot; height=&quot;세로&quot;&gt;</span><br></pre></td></tr></table></figure>
 
-<img src="/assets/img/roamgom.jpg" width="400">
+<img src="/images/roamgom.jpg" width="400">
 
 
 
@@ -534,7 +531,7 @@
 </tr>
 </tbody></table>
 <p>테이블 생성하는데 시간이 많이 걸리네요.</p>
-<p><a href="http://www.tablesgenerator.com/markdown_tables" target="_blank" rel="noopener"><strong>이 사이트</strong></a> 를 사용하면 쉽게 테이블을 생성할 수 있습니다 🤗</p>
+<p><a href="http://www.tablesgenerator.com/markdown_tables" target="_blank" rel="noopener"><strong>이 사이트</strong></a> 를 사용하면 테이블을 생성할 수 있습니다. (상당히 어려워요)</p>
 <p><br><br></p>
 <hr>
 <p>제가 알고 있는 마크다운 문법은 이렇게 정리되네요. <del>상당하쥬?</del></p>
@@ -543,12 +540,8 @@
 <p>…</p>
 <br>
 
-
-
-<p>아, 앞서 추천한 <a href="https://typora.io/" target="_blank" rel="noopener"><strong>typora</strong></a> 에 대해 소개를 잊을뻔 했네요.</p>
-<br>
-
-<h3 id="typora"><a href="#typora" class="headerlink" title="typora"></a>typora</h3><img src="/images/post/2018-02-11/typora.gif">
+<h3 id="typora"><a href="#typora" class="headerlink" title="typora"></a>typora</h3><p>앞서 추천한 <a href="https://typora.io/" target="_blank" rel="noopener"><strong>typora</strong></a> 입니다.</p>
+<img src="/images/post/2018-02-11/typora.gif">
 
 
 

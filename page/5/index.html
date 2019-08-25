@@ -216,7 +216,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2017/08/10/2017-08-10_oh_my_zsh/" class="post-title-link" itemprop="url">OhMyZsh로 터미널 꾸미기</a>
+            <a href="/2017/08/10/2017-08-10_oh_my_zsh/" class="post-title-link" itemprop="url">OhMyZsh 설치하기</a>
           
         </h1>
 
@@ -242,7 +242,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-25 15:21:21" itemprop="dateModified" datetime="2019-08-25T15:21:21+09:00">2019-08-25</time>
+                <time title="Modified: 2019-08-25 17:22:17" itemprop="dateModified" datetime="2019-08-25T17:22:17+09:00">2019-08-25</time>
               </span>
             
           
@@ -264,38 +264,37 @@
 <blockquote>
 <p><span style="color:red"> 이 가이드는 MacOS에서 작성했습니다. </span></p>
 </blockquote>
-<br>
-맥과 리눅스에서 개발용으로 터미널을 많이 사용하게 됩니다. 처음 터미널을 접했을 때, 사용방법은 물론이고 화면을 보는게 매우 불편했습니다...
-
-<p>그래서 좀더 예쁜 터미널로 꾸미기 위해 Bash 대신 Zsh를 사용하기 시작!<br><br><br></p>
 <h3 id="iTerm2-설치"><a href="#iTerm2-설치" class="headerlink" title="iTerm2 설치"></a>iTerm2 설치</h3><blockquote>
 <p>Mac OS</p>
 </blockquote>
-<p>Mac에서 쓰이는 터미널 iTerm2를 먼저 설치를 해주세요.</p>
+<p>먼저 iterm2를 설치합니다.</p>
 <p><img src="/images/post/2017-08-10/iterm2.png" alt></p>
 <ul>
 <li><a href="https://www.iterm2.com/downloads.html" target="_blank" rel="noopener">Official Download Page</a></li>
 </ul>
 <p><strong>Stable Releases</strong>에서 가장 최신을 받아주시면 됩니다.<br>.zip파일을 열고 iTerm2를 응용프로그램으로 옮겨주세요.</p>
-<br>
-
-<hr>
 <h3 id="HomeBrew-설치"><a href="#HomeBrew-설치" class="headerlink" title="HomeBrew 설치"></a>HomeBrew 설치</h3><blockquote>
 <p>Mac OS</p>
 </blockquote>
-<p>Ubuntu에 APT가 있다면 Mac에는 HomeBrew가 있다!</p>
-<p>APT와 마찬가지로 각종 프로그램 패키지를 관리해주는 프로그램입니다. <code>brew</code> 명령어로 패키지를 관리합니다.<br><img src="/images/post/2017-08-10/homebrew.png" alt></p>
+<p>Ubuntu의 APT와 동일한 역할을 하는 프로그램입니다.</p>
+<p><img src="/images/post/2017-08-10/homebrew.png" alt></p>
 <ul>
 <li><a href="https://brew.sh/" target="_blank" rel="noopener">Official Page</a></li>
 </ul>
 <p><strong>설치 명령어</strong></p>
-<figure class="highlight plain"><figcaption><span>/usr/bin/ruby -e "$(curl -fsSL</span><a href="https://raw.githubusercontent.com/Homebrew/install/master/install)" ```" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;br&gt;&lt;br&gt;</span><br><span class="line"></span><br><span class="line">- #### Brew 사용법 &lt;link#&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;br&gt;&lt;br&gt;</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line">### Zsh 설치</span><br><span class="line">&gt; Mac OS / Linux</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Shell 종류는 다양합니다. Bash, sh, csh, ksh...</span><br><span class="line">그 중 우리가 사용할 쉘은 바로 Zsh입니다!</span><br><span class="line">![](/images/post/2017-08-10/zsh.jpg)</span><br><span class="line"></span><br><span class="line">왜 Zsh를 쓰냐고요?</span><br><span class="line"></span><br><span class="line">Zsh 는 Bash에 비해 확장성이 뛰어납니다.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* cd/ls 자동완성</span><br><span class="line">  `$ cd / ls &lt;TAB&gt;` 사용 시 현재 Directory를 표시해줘 빠른 이동이 가능하다.</span><br><span class="line">![](/images/post/2017-08-10/cd_completion.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* history 검색</span><br><span class="line">`&lt;Ctrl&gt;+R` 을 통해 이전에 쓴 명령어를 쉽게 찾을 수 있다.</span><br><span class="line">![](/images/post/2017-08-10/find_command.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">이 외에 많은 [이유](https://code.joejag.com/2014/why-zsh.html)가 있습니다.</span><br><span class="line"></span><br><span class="line">**하지만 제일 중요한 이유!**</span><br><span class="line"></span><br><span class="line">![](/images/post/2017-08-10/zsh_pretty.png)</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">![](/images/post/2017-08-10/pretty.jpg)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">위에서 설치한 `brew`를 통해 zsh를 설치합니다.</span><br><span class="line"></span><br><span class="line">**설치 명령어**</span><br><span class="line"></span><br><span class="line">```$ brew install zsh</span><br></pre></td></tr></table></figure>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure>
 
-<p>자 그러면 이렇게 예쁜 쉘을 만들어봅시다.</p>
-<br>
-***
+<h3 id="Zsh-설치"><a href="#Zsh-설치" class="headerlink" title="Zsh 설치"></a>Zsh 설치</h3><blockquote>
+<p>Mac OS / Linux</p>
+</blockquote>
+<p>Shell 종류는 다양합니다. Bash, sh, csh, ksh…<br>그 중 우리가 사용할 쉘은 바로 Zsh입니다.</p>
+<p><img src="/images/post/2017-08-10/zsh.jpg" alt></p>
+<p>위에서 설치한 <code>brew</code>를 통해 zsh를 설치합니다.</p>
+<p><strong>설치 명령어</strong></p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install zsh</span><br></pre></td></tr></table></figure>
 
-<h3 id="Oh-My-Zsh"><a href="#Oh-My-Zsh" class="headerlink" title="Oh-My-Zsh"></a>Oh-My-Zsh</h3><blockquote>
+<p>자 그러면 이렇게 바로 zsh</p>
+<h4 id="Oh-My-Zsh"><a href="#Oh-My-Zsh" class="headerlink" title="Oh-My-Zsh"></a>Oh-My-Zsh</h4><blockquote>
 <p>Mac OS / Linux</p>
 </blockquote>
 <p>OhMyZsh는 Zsh에 각종 Plugin과 Theme을 적용시켜주는 Framework입니다.</p>
@@ -306,13 +305,68 @@
 <br>
 
 <p><strong>설치 명령어</strong></p>
-<figure class="highlight plain"><figcaption><span>sh -c "$(curl -fsSL</span><a href="https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" ```" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">설치가 완료되면</span><br><span class="line"></span><br><span class="line">![](/images/post/2017-08-10/ohmyzsh.jpeg)</span><br><span class="line"></span><br><span class="line">멋진 로고가 나타납니다.</span><br><span class="line"></span><br><span class="line">마지막으로 테마와 폰트를 설정해줘야겠죠?</span><br><span class="line">테마에는 여러 종류가 있으니 마음에 맞는 테마를 고르세요!</span><br><span class="line"></span><br><span class="line">* [Theme Link](https://github.com/robbyrussell/oh-my-zsh/wiki/themes)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;br&gt;&lt;br&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**테마 설정**</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">이제 원하는 테마를 적용해야겠죠?</span><br><span class="line"></span><br><span class="line">설정을 해주기 위해 .zshrc파일을 열어줍니다. (Sublimetext3, Atom, vim 등)</span><br><span class="line"></span><br><span class="line">vim으로 열 경우</span><br><span class="line"></span><br><span class="line">```vim ~/.zshrc</span><br></pre></td></tr></table></figure>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</span><br></pre></td></tr></table></figure>
+
+<p>설치가 완료되면<br>아래와 같은 화면이 나옵니다.</p>
+<p><img src="/images/post/2017-08-10/ohmyzsh.jpeg" alt></p>
+<p>마지막으로 테마와 폰트를 설정해줘야겠죠?<br>테마에는 여러 종류가 있으니 마음에 맞는 테마를 고르세요!</p>
+<ul>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes" target="_blank" rel="noopener">Theme Link</a></li>
+</ul>
+<p><strong>테마 설정</strong></p>
+<p>이제 원하는 테마를 적용해야겠죠?</p>
+<p>설정을 해주기 위해 .zshrc파일을 열어줍니다. (Sublimetext3, Atom, vim 등)</p>
+<p>vim으로 열 경우</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> vim ~/.zshrc</span><br></pre></td></tr></table></figure>
 
 <p>파일에서 10번 줄에 있는 설정이 바로 테마를 정해주는 부분입니다.<br><img src="/images/post/2017-08-10/zshrc.png" alt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">THEME_NAME에 원하는 테마 이름을 입력하고 iTerm2를 재부팅 해주면 해당 테마가 적용됩니다.</span><br><span class="line">제가 사용하고 있는 Zsh테마는 `agnoster`입니다.</span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">**폰트/색테마 설정**</span><br><span class="line"></span><br><span class="line">폰트를 설정해주려면 우선 폰트 파일이 필요합니다.</span><br><span class="line">구글링해서 원하는 폰트를 설치해도 무방하지만 이번 가이드에서는 링크를 통해 설정합시다.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* [Font Link](https://www.slant.co/topics/67/~best-programming-fonts)</span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">**설치가 완료되면 iTerm을 종료하고 다시 실행시켜 주세요. 설정에서 설치한 폰트를 로드하지 못할 수 있습니다.**</span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">iTerm을 다시 실행하고 메뉴창에서</span><br><span class="line">*iTerm2-Preferences...*</span><br><span class="line"></span><br><span class="line">![](/images/post/2017-08-10/preferences.png)</span><br><span class="line"></span><br><span class="line">*Profiles-Default-Text-Change Font*</span><br><span class="line">로 들어가서 Collection을 **고정폭**으로 설정해주세요. 그리고 Family에서 해당 폰트를 선택해주세요.</span><br><span class="line">(안그러면 시스템 상 설치된 모든 폰트가 나와요)</span><br><span class="line"></span><br><span class="line">![](/images/post/2017-08-10/preferences_text.png)</span><br><span class="line"></span><br><span class="line">자 이제는 **색테마**차례군요.</span><br><span class="line">색테마는 현재 적용한 Zsh테마에서 폰트 색상 및 배경을 따로 설정해주는거라 보시면 돼요.</span><br><span class="line"></span><br><span class="line">테마는 구글에서 `itermcolors`로 검색해서 마음에 드는 걸로 설치하면 됩니다.</span><br><span class="line"></span><br><span class="line">제가 마음에 들었던 테마 링크를 올려드릴게요.</span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">![](/images/post/2017-08-10/facebook.png)</span><br><span class="line"></span><br><span class="line">* [Facebook-iterm-Theme](https://github.com/slwen/facebook-iterm-theme)</span><br><span class="line"></span><br><span class="line">![](/images/post/2017-08-10/oceanic.png)</span><br><span class="line"></span><br><span class="line">* [Oceanic-next-theme](https://github.com/mhartington/oceanic-next-iterm)</span><br><span class="line"></span><br><span class="line">이제 불러오기만 하면 끝나겠군요.</span><br><span class="line"></span><br><span class="line">폰트를 설정했을때와 동일하게</span><br><span class="line">*iTerm2-Preferences...*</span><br><span class="line"></span><br><span class="line">![](/images/post/2017-08-10/preferences.png)</span><br><span class="line"></span><br><span class="line">*Profiles-Default-Colors-Color Presets...* 에서 *Import...* 로 해당 파일을 불러와 적용하면 끝납니다.</span><br><span class="line"></span><br><span class="line">![](/images/post/2017-08-10/preferences_color.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line">### zsh-syntax-highlighting</span><br><span class="line">&gt; Mac OS / Linux</span><br><span class="line"></span><br><span class="line">zsh-syntax-highlighting은 시스템 PATH에 등록된 명령어들을 알아서 Syntax처리 해주는 친구입니다.</span><br><span class="line">한번에 명령어의 가능 여부를 확인할 수 있죠.</span><br><span class="line"></span><br><span class="line">![](/images/post/2017-08-10/zsh_syntax.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**설치 명령어**</span><br><span class="line"></span><br><span class="line">```$ brew install zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME="THEME_NAME"</span><br></pre></td></tr></table></figure>
+
+<p>THEME_NAME에 원하는 테마 이름을 입력하고 iTerm2를 재부팅 해주면 해당 테마가 적용됩니다.<br>제가 사용하고 있는 테마는 <code>agnoster</code>입니다.</p>
+<p><strong>폰트/색테마 설정</strong></p>
+<p>폰트를 설정해주려면 우선 폰트 파일이 필요합니다.<br>구글링해서 원하는 폰트를 설치해도 무방하지만 이번 가이드에서는 링크를 통해 설정합시다.</p>
+<ul>
+<li><a href="https://www.slant.co/topics/67/~best-programming-fonts" target="_blank" rel="noopener">Font Link</a></li>
+</ul>
+<br>
+
+<p><strong>설치가 완료되면 iTerm을 종료하고 다시 실행시켜 주세요. 설정에서 설치한 폰트를 로드하지 못할 수 있습니다.</strong></p>
+<br>
+
+<p>iTerm을 다시 실행하고 메뉴창에서<br><em>iTerm2-Preferences…</em></p>
+<p><img src="/images/post/2017-08-10/preferences.png" alt></p>
+<p><em>Profiles-Default-Text-Change Font</em><br>로 들어가서 Collection을 <strong>고정폭</strong>으로 설정해주세요. 그리고 Family에서 해당 폰트를 선택해주세요.<br>(안그러면 시스템 상 설치된 모든 폰트가 나와요)</p>
+<p><img src="/images/post/2017-08-10/preferences_text.png" alt></p>
+<p><strong>색테마 설정</strong></p>
+<p>색테마는 현재 적용한 Zsh테마에서 폰트 색상 및 배경을 따로 설정해주는거라 보시면 돼요.</p>
+<p>테마는 구글에서 <code>itermcolors</code>로 검색해서 마음에 드는 걸로 설치하면 됩니다.</p>
+<p>제가 마음에 들었던 테마 링크를 공유드립니다.</p>
+<br>
+
+<p><img src="/images/post/2017-08-10/facebook.png" alt></p>
+<ul>
+<li><a href="https://github.com/slwen/facebook-iterm-theme" target="_blank" rel="noopener">Facebook-iterm-Theme</a></li>
+</ul>
+<p><img src="/images/post/2017-08-10/oceanic.png" alt></p>
+<ul>
+<li><a href="https://github.com/mhartington/oceanic-next-iterm" target="_blank" rel="noopener">Oceanic-next-theme</a></li>
+</ul>
+<p>이제 불러오기만 하면 끝나겠군요.</p>
+<p>폰트를 설정했을때와 동일하게<br><em>iTerm2-Preferences…</em></p>
+<p><img src="/images/post/2017-08-10/preferences.png" alt></p>
+<p><em>Profiles-Default-Colors-Color Presets…</em> 에서 <em>Import…</em> 로 해당 파일을 불러와 적용하면 끝납니다.</p>
+<p><img src="/images/post/2017-08-10/preferences_color.png" alt></p>
+<br>
+
+<hr>
+<h3 id="그-외-plugin-소개"><a href="#그-외-plugin-소개" class="headerlink" title="그 외 plugin 소개"></a>그 외 plugin 소개</h3><p>zshell을 사용하면서 편리한 plugin입니다.</p>
+<h4 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h4><p>zsh-syntax-highlighting으로 보다 더 빠르게 터미널을 사용할 수 있습니다.<br>한번에 명령어의 가능 여부를 확인할 수 있죠.</p>
+<p><img src="/images/post/2017-08-10/zsh_syntax.png" alt></p>
+<p><strong>설치 명령어</strong></p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
 
 <p>또는</p>
-<figure class="highlight plain"><figcaption><span>git clone</span><a href="https://github.com/zsh-users/zsh-syntax-highlighting.git" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo &quot;source $&#123;(q-)PWD&#125;/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh&quot; &gt;&gt; $&#123;ZDOTDIR:-$HOME&#125;/.zshrc</span><br></pre></td></tr></table></figure>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/zsh-users/zsh-syntax-highlighting.git</span><br><span class="line"><span class="meta">$</span> echo "source $&#123;(q-)PWD&#125;/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" &gt;&gt; $&#123;ZDOTDIR:-$HOME&#125;/.zshrc</span><br></pre></td></tr></table></figure>
 
 <br>
 
