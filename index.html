@@ -373,7 +373,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2018/05/20/2018-05-20-pyenv_direnv_python/">
+    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2019/06/10/project_manuscript/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="roamgom">
@@ -387,7 +387,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2018/05/20/2018-05-20-pyenv_direnv_python/" class="post-title-link" itemprop="url">Pyenv, Direnv로 파이썬 개발환경 구축하기</a>
+            <a href="/2019/06/10/project_manuscript/" class="post-title-link" itemprop="url">CNN을 활용한 비속어 탐지기</a>
           
         </h1>
 
@@ -402,7 +402,7 @@
                 
               
 
-              <time title="Created: 2018-05-20 12:00:00" itemprop="dateCreated datePublished" datetime="2018-05-20T12:00:00+09:00">2018-05-20</time>
+              <time title="Created: 2019-06-10 15:20:00" itemprop="dateCreated datePublished" datetime="2019-06-10T15:20:00+09:00">2019-06-10</time>
             </span>
           
             
@@ -413,7 +413,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-25 17:40:22" itemprop="dateModified" datetime="2019-08-25T17:40:22+09:00">2019-08-25</time>
+                <time title="Modified: 2019-08-27 00:08:35" itemprop="dateModified" datetime="2019-08-27T00:08:35+09:00">2019-08-27</time>
               </span>
             
           
@@ -429,60 +429,42 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>파이썬으로 개발하면서 꼭 필요한 것 중 하나가 바로 개발환경 분리하기 입니다.</p>
-<p>저도 다른 사람들과 마찬가지로 이전에 많이 사용한게 <code>virtualenv</code>에 <code>autoenv</code>를 사용해 디렉토리마다 환경 분리 시켜줌과 동시에 터미널에서 쉽게 작업할 수 있었죠.</p>
-<p>하지만 가끔 회사 또는 특정 상황에서 패키지 버전 뿐 아니라 파이썬 버전이 달라지는 경우도 종종 생길 수 있다고 생각하여 <code>pyenv</code>와 <code>direnv</code>로 갈아탔습니다.</p>
-<h1 id="Pyenv"><a href="#Pyenv" class="headerlink" title="Pyenv"></a>Pyenv</h1><p>한 컴퓨터에서 2개 이상의 파이썬 버전을 사용하는 건 정말 힘들죠. 추가적인 설치와 환경변수 변경 없이 원하는 파이썬 버전을 골라 사용하게 도와주는 친구가 <code>pyenv</code>입니다.</p>
-<p>적용된 개발환경을 보자면,</p>
-<p><img src="/images/post/2018-05-20/terminal.png" alt></p>
-<p>이렇게 원하는 파이썬 버전을 그때그때 사용할 수 있습니다.</p>
-<blockquote>
-<p>설치 </p>
-</blockquote>
-<p><a href="https://github.com/pyenv/pyenv" target="_blank" rel="noopener">pyenv 링크</a></p>
+          <h2 id="Manuscript"><a href="#Manuscript" class="headerlink" title="Manuscript"></a>Manuscript</h2><p>1-D CNN을 활용한 비속어 탐지기</p>
 <ul>
-<li>macOS</li>
+<li>언어: Python</li>
+<li>주 패키지: Flask, Jamo, Lime, Pytorch</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew update</span><br><span class="line"><span class="meta">$</span> brew install pyenv</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Linux</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> $</span> git clone https://github.com/pyenv/pyenv.git ~/.pyenv</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> echo 'export PYENV_ROOT="$HOME/.pyenv"' &gt;&gt; ~/.bash_profile</span><br><span class="line"><span class="meta">$</span> echo 'export PATH="$PYENV_ROOT/bin:$PATH"' &gt;&gt; ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> echo -e 'if command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; then\n  eval "$(pyenv init -)"\nfi' &gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure>
-
-<p><strong>Zsh를 사용할 경우 ~/.zshenv 파일에 추가해주세요.</strong></p>
 <blockquote>
-<p>명령어</p>
+<p><del><a href="https://roamgom.github.io/manuscript/">Webpage</a></del>  (Currently not working)<br><a href="https://github.com/roamgom/manuscript" target="_blank" rel="noopener">Front page Github</a><br><a href="https://github.com/roamgom/manuscript_flask" target="_blank" rel="noopener">Back-End Github</a></p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 파이썬 버전 리스트</span><br><span class="line"><span class="meta">$</span> pyenv versions</span><br><span class="line"></span><br><span class="line">* system (set by /Users/roamgom/SCV/pypy_test/.python-version)</span><br><span class="line">  3.4.2</span><br><span class="line">  3.4.6</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 파이썬 특정 버전 설치</span><br><span class="line"><span class="meta">$</span> pyenv install 3.6.5</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 현재 디렉토리에서만 파이썬 버전 변경</span><br><span class="line"><span class="meta">#</span> 실행시 디렉토리 안에 생긴 .python-version에 버전 명시</span><br><span class="line"><span class="meta">$</span> pyenv local 3.4.6</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 전체 시스템에서 파이썬 버전 변경</span><br><span class="line"><span class="meta">$</span> pyenv global 3.4.6</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> system은 OS에 설치된 파이썬의 기본 버전</span><br><span class="line"><span class="meta">$</span> pyenv local system</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 특정 버전 삭제</span><br><span class="line"><span class="meta">$</span> pyenv uninstall 3.4.6</span><br></pre></td></tr></table></figure>
+<h3 id="간단-설명"><a href="#간단-설명" class="headerlink" title="간단 설명"></a>간단 설명</h3><p>문장을 자음, 모음 단위로 나눠서 1-D CNN 형태에 맞춰 모델링 학습을 한 후,<br>이 모델을 통해 비속어가 포함되어 있는지 탐지.<br>결과는 <code>Lime</code>을 통해 보다 직관적이게 표현했으며,<br>API는 <code>Flask</code>, 프론트는 <code>Vue</code>와 <code>Github pages</code> 사용</p>
+<br>
 
-<p>위의 명령어로 원하는 버전을 설치하여 각 디렉토리에 버전을 지정해주면 나머지는 <code>direnv</code>에서 처리해줍니다!</p>
-<hr>
-<h1 id="Direnv"><a href="#Direnv" class="headerlink" title="Direnv"></a>Direnv</h1><p>이 친구.. 정말 좋은 친구에요 :smile:</p>
-<p><code>autoenv</code>를 사용하며 안타까웠던 것 중 하나가 디렉토리에 입을 할때와 달리 이탈했을 때 환경이 비활성화가 안되는 점이었습니다. 매번 <code>deactivate</code>를 써야했죠.</p>
-<p>그런데, <code>direnv</code> 이 친구는 둘 다 가능합니다! 앞서 <code>pyenv</code>로 버전을 명시한 디렉토리에 진입/이탈할 경우 알아서 환경을 활성/비활성화 해줍니다.</p>
-<p>이제 우리는 초기 환경 세팅만 해주면 그 후에는 신경쓰지 않고 편하게 작업할 수 있다는 얘기죠.</p>
-<blockquote>
-<p>설치</p>
-</blockquote>
-<p><a href="https://direnv.net/" target="_blank" rel="noopener">direnv 링크</a></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 설치</span><br><span class="line"><span class="meta">$</span> git clone https://github.com/direnv/direnv</span><br><span class="line"><span class="meta">$</span> cd direnv</span><br><span class="line"><span class="meta">$</span> make install</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> shell 환경변수</span><br><span class="line"><span class="meta">#</span> BASH</span><br><span class="line"><span class="meta">$</span> eval "$(direnv hook bash)"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> ZSH</span><br><span class="line"><span class="meta">$</span> eval "$(direnv hook zsh)"</span><br></pre></td></tr></table></figure>
+<p><img src="/images/project/manuscript/1d-cnn.png" alt></p>
+<p align="center" style="bold">
+    <a href="https://www.aclweb.org/anthology/D14-1181" target="_blank" rel="noopener">CNN for Sentence Classification by Yoon Kim</a>
+</p>
 
-<p><strong>마찬가지로 shell마다 다르게 작성해줘야 합니다.</strong></p>
-<p>기타 쉘 설정은 <a href="https://direnv.net/" target="_blank" rel="noopener">여기에서</a></p>
-<blockquote>
-<p>명령어</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 현재 디렉토리에서 direnv 활성화</span><br><span class="line"><span class="meta">$</span> direnv allow</span><br></pre></td></tr></table></figure>
+<p><img src="/images/project/manuscript/flow.png" alt></p>
+<p align="center" style="bold">
+    전체 Flow
+</p>
+
+<p><img src="/images/project/manuscript/lime.png" alt></p>
+<p align="center" style="bold">
+    <a href="https://github.com/marcotcr/lime" target="_blank" rel="noopener">Python Lime</a>
+</p>
 
 <hr>
-<p>자, 그러면 본격적으로 개발환경을 구축해보도록 하겠습니다.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 프로젝트 디렉토리 생성 후 진입</span><br><span class="line"><span class="meta">$</span> mkdir project</span><br><span class="line"><span class="meta">$</span> cd project</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 원하는 파이썬 버전 선택</span><br><span class="line"><span class="meta">$</span> pyenv local 3.4.6</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 해당 디렉토리에 파이썬 패키지 폴더 생성</span><br><span class="line"><span class="meta">$</span> python -m venv .venv</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 개발환경 활성화를 해주는 트리거 파일 작성</span><br><span class="line"><span class="meta">#</span> direnv 에러가 뜨면 정상 (아직 활성화를 안해줬기 때문)</span><br><span class="line"><span class="meta">$</span> echo 'source .venv/bin/activate' &gt; .envrc</span><br><span class="line">direnv: error .envrc is blocked. Run `direnv allow` to approve its content.</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> direnv 활성화</span><br><span class="line"><span class="meta">$</span> direnv allow</span><br></pre></td></tr></table></figure>
+<h3 id="결과물"><a href="#결과물" class="headerlink" title="결과물"></a>결과물</h3><p><img src="/images/project/manuscript/demo_1.gif" alt></p>
+<p align="center" style="bold">
+    Demo 1
+</p>
 
-<p>세팅이 완료된 후 컴퓨터 글로벌과 프로젝트의 파이썬 버전, 패키지를 살펴보면</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">roamgom$</span> python --version</span><br><span class="line">Python 3.6.5</span><br><span class="line"><span class="meta">roamgom$</span> pip list</span><br><span class="line">Package                  Version</span><br><span class="line">------------------------ -------</span><br><span class="line">beautifulsoup4           4.6.0</span><br><span class="line">boto3                    1.7.16</span><br><span class="line">botocore                 1.10.21</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="meta">roamgom$</span> cd project</span><br><span class="line">direnv: loading .envrc</span><br><span class="line">direnv: export +VIRTUAL_ENV ~PATH</span><br><span class="line"></span><br><span class="line"><span class="meta">project$</span> python --version</span><br><span class="line">Python 3.4.6</span><br><span class="line"></span><br><span class="line"><span class="meta">project$</span> pip list</span><br><span class="line">pip (1.5.6)</span><br><span class="line">setuptools (2.1)</span><br><span class="line"></span><br><span class="line"><span class="meta">project$</span> ls -a</span><br><span class="line">.               .envrc          .venv</span><br><span class="line">..              .python-version</span><br><span class="line"></span><br><span class="line"><span class="meta">project$</span> cd ..</span><br><span class="line">direnv: unloading</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> python --version</span><br><span class="line">Python 3.6.5</span><br></pre></td></tr></table></figure>
-
-<p>이제 특정 디렉토리에 개발환경을 맞출 뿐 아니라<br>진입/이탈할 경우 알아서 환경까지 변경해 줍니다.</p>
+<p><img src="/images/project/manuscript/demo_2.gif" alt></p>
+<p align="center" style="bold">
+    Demo 2
+</p>
 
         
       
@@ -506,7 +488,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -554,7 +536,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -581,7 +563,9 @@
         
           
         
-        <span class="site-state-item-count">6</span>
+          
+        
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
