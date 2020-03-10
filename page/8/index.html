@@ -202,148 +202,6 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2017/09/19/2017-09-19-sublime_vscode_terminal/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="roamgom">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/roamgom.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="roamgom's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2017/09/19/2017-09-19-sublime_vscode_terminal/" class="post-title-link" itemprop="url">Sulime / VScode를 Terminal로 열어보자</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2017-09-19 13:00:00" itemprop="dateCreated datePublished" datetime="2017-09-19T13:00:00+09:00">2017-09-19</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-25 17:29:44" itemprop="dateModified" datetime="2019-08-25T17:29:44+09:00">2019-08-25</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>다들 코딩을 하다보면, 터미널과 IDE를 왔다리 갔다리 하는게 일상일거라 생각하며 터미널에서 편집기를 열어보는 방법을 작성해봅니다.</p>
-<h2 id="VScode"><a href="#VScode" class="headerlink" title="VScode"></a>VScode</h2><ol>
-<li><p>VScode를 열어주세요.</p>
-</li>
-<li><p><code>⇧⌘P</code>로 Command Palette를 열어주고</p>
-</li>
-<li><p><code>&gt; shell command: Install &#39;code&#39; command in PATH</code> 입력 후 엔터</p>
-</li>
-</ol>
-<p>를 통해 PATH에 code 명령어를 설치해줍니다.</p>
-<br>
-
-<p>이제 터미널에서 원하는 디렉토리에서 <code>code</code> 명령어를 통해 원하는 디렉토리를 열 수 있습니다.</p>
-<p>ex)</p>
-<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">특정 디렉토리, 파일을 열 때</span><br><span class="line"><span class="meta">$</span> code /myproject/project_A</span><br><span class="line"></span><br><span class="line">현재 디렉토리를 열 때</span><br><span class="line"><span class="meta">$</span> code .</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="Sublime-Text"><a href="#Sublime-Text" class="headerlink" title="Sublime Text"></a>Sublime Text</h2><ol>
-<li>디렉토리 생성</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/bin</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>Sublime 실행경로 복사</li>
-</ol>
-<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl</span><br></pre></td></tr></table></figure>
-
-<p><strong>Sublime 앱의 명칭을 Finder를 통해 정확히 기재해주셔야합니다.</strong><br><code>&quot;Applications/서브라임_이름.app/...&quot;</code></p>
-<p>다음은 터미널을 뭘 쓰냐에 따라 방식이 나눠집니다.</p>
-<br>
-
-<h3 id="Bash를-쓸-경우"><a href="#Bash를-쓸-경우" class="headerlink" title="Bash를 쓸 경우"></a>Bash를 쓸 경우</h3><blockquote>
-<p>~/.bash_profile 파일에 복사</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo &apos;export PATH=$PATH:$HOME/bin&apos; &gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<blockquote>
-<p>Sublime을 기본 에디터로 설정</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;export EDITOR=&apos;subl&apos; -w&quot;&gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h3 id="Zsh를-쓸-경우"><a href="#Zsh를-쓸-경우" class="headerlink" title="Zsh를 쓸 경우"></a>Zsh를 쓸 경우</h3><blockquote>
-<p>~/.zshrc 파일에 복사</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;export PATH=$PATH:$HOME/bin&apos; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<blockquote>
-<p>Sublime을 기본 에디터로 설정</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;export EDITOR=&apos;subl&apos; -w&quot; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<p><br><br><br><strong>자 모든 설정이 끝났습니다!</strong></p>
-<p>터미널 재시작 후</p>
-<p>자신이 열고 디렉토리에서 <code>subl .</code>이라고 입력하면</p>
-<p>바로 서브라임이 사용가능합니다</p>
-<p>‘\(- 3-)/`</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2017/09/19/2017-12-31-RE_2017/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -537,11 +395,207 @@
   </article>
 
     
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2017/08/10/2017-08-10_oh_my_zsh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="roamgom">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/roamgom.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="roamgom's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2017/08/10/2017-08-10_oh_my_zsh/" class="post-title-link" itemprop="url">OhMyZsh 설치하기</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2017-08-10 11:32:00" itemprop="dateCreated datePublished" datetime="2017-08-10T11:32:00+09:00">2017-08-10</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-08-25 17:22:17" itemprop="dateModified" datetime="2019-08-25T17:22:17+09:00">2019-08-25</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p><span style="color:red"> <strong>MacOS / Linux ONLY</strong> </span></p>
+</blockquote>
+<blockquote>
+<p><span style="color:red"> 이 가이드는 MacOS에서 작성했습니다. </span></p>
+</blockquote>
+<h3 id="iTerm2-설치"><a href="#iTerm2-설치" class="headerlink" title="iTerm2 설치"></a>iTerm2 설치</h3><blockquote>
+<p>Mac OS</p>
+</blockquote>
+<p>먼저 iterm2를 설치합니다.</p>
+<p><img src="/images/post/2017-08-10/iterm2.png" alt></p>
+<ul>
+<li><a href="https://www.iterm2.com/downloads.html" target="_blank" rel="noopener">Official Download Page</a></li>
+</ul>
+<p><strong>Stable Releases</strong>에서 가장 최신을 받아주시면 됩니다.<br>.zip파일을 열고 iTerm2를 응용프로그램으로 옮겨주세요.</p>
+<h3 id="HomeBrew-설치"><a href="#HomeBrew-설치" class="headerlink" title="HomeBrew 설치"></a>HomeBrew 설치</h3><blockquote>
+<p>Mac OS</p>
+</blockquote>
+<p>Ubuntu의 APT와 동일한 역할을 하는 프로그램입니다.</p>
+<p><img src="/images/post/2017-08-10/homebrew.png" alt></p>
+<ul>
+<li><a href="https://brew.sh/" target="_blank" rel="noopener">Official Page</a></li>
+</ul>
+<p><strong>설치 명령어</strong></p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure>
+
+<h3 id="Zsh-설치"><a href="#Zsh-설치" class="headerlink" title="Zsh 설치"></a>Zsh 설치</h3><blockquote>
+<p>Mac OS / Linux</p>
+</blockquote>
+<p>Shell 종류는 다양합니다. Bash, sh, csh, ksh…<br>그 중 우리가 사용할 쉘은 바로 Zsh입니다.</p>
+<p><img src="/images/post/2017-08-10/zsh.jpg" alt></p>
+<p>위에서 설치한 <code>brew</code>를 통해 zsh를 설치합니다.</p>
+<p><strong>설치 명령어</strong></p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install zsh</span><br></pre></td></tr></table></figure>
+
+<p>자 그러면 이렇게 바로 zsh</p>
+<h4 id="Oh-My-Zsh"><a href="#Oh-My-Zsh" class="headerlink" title="Oh-My-Zsh"></a>Oh-My-Zsh</h4><blockquote>
+<p>Mac OS / Linux</p>
+</blockquote>
+<p>OhMyZsh는 Zsh에 각종 Plugin과 Theme을 적용시켜주는 Framework입니다.</p>
+<p><img src="/images/post/2017-08-10/ohmyzsh_logo.png" alt></p>
+<ul>
+<li><a href="http://ohmyz.sh/" target="_blank" rel="noopener">Official Page</a></li>
+</ul>
+<br>
+
+<p><strong>설치 명령어</strong></p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</span><br></pre></td></tr></table></figure>
+
+<p>설치가 완료되면<br>아래와 같은 화면이 나옵니다.</p>
+<p><img src="/images/post/2017-08-10/ohmyzsh.jpeg" alt></p>
+<p>마지막으로 테마와 폰트를 설정해줘야겠죠?<br>테마에는 여러 종류가 있으니 마음에 맞는 테마를 고르세요!</p>
+<ul>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes" target="_blank" rel="noopener">Theme Link</a></li>
+</ul>
+<p><strong>테마 설정</strong></p>
+<p>이제 원하는 테마를 적용해야겠죠?</p>
+<p>설정을 해주기 위해 .zshrc파일을 열어줍니다. (Sublimetext3, Atom, vim 등)</p>
+<p>vim으로 열 경우</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> vim ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>파일에서 10번 줄에 있는 설정이 바로 테마를 정해주는 부분입니다.<br><img src="/images/post/2017-08-10/zshrc.png" alt></p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME="THEME_NAME"</span><br></pre></td></tr></table></figure>
+
+<p>THEME_NAME에 원하는 테마 이름을 입력하고 iTerm2를 재부팅 해주면 해당 테마가 적용됩니다.<br>제가 사용하고 있는 테마는 <code>agnoster</code>입니다.</p>
+<p><strong>폰트/색테마 설정</strong></p>
+<p>폰트를 설정해주려면 우선 폰트 파일이 필요합니다.<br>구글링해서 원하는 폰트를 설치해도 무방하지만 이번 가이드에서는 링크를 통해 설정합시다.</p>
+<ul>
+<li><a href="https://www.slant.co/topics/67/~best-programming-fonts" target="_blank" rel="noopener">Font Link</a></li>
+</ul>
+<br>
+
+<p><strong>설치가 완료되면 iTerm을 종료하고 다시 실행시켜 주세요. 설정에서 설치한 폰트를 로드하지 못할 수 있습니다.</strong></p>
+<br>
+
+<p>iTerm을 다시 실행하고 메뉴창에서<br><em>iTerm2-Preferences…</em></p>
+<p><img src="/images/post/2017-08-10/preferences.png" alt></p>
+<p><em>Profiles-Default-Text-Change Font</em><br>로 들어가서 Collection을 <strong>고정폭</strong>으로 설정해주세요. 그리고 Family에서 해당 폰트를 선택해주세요.<br>(안그러면 시스템 상 설치된 모든 폰트가 나와요)</p>
+<p><img src="/images/post/2017-08-10/preferences_text.png" alt></p>
+<p><strong>색테마 설정</strong></p>
+<p>색테마는 현재 적용한 Zsh테마에서 폰트 색상 및 배경을 따로 설정해주는거라 보시면 돼요.</p>
+<p>테마는 구글에서 <code>itermcolors</code>로 검색해서 마음에 드는 걸로 설치하면 됩니다.</p>
+<p>제가 마음에 들었던 테마 링크를 공유드립니다.</p>
+<br>
+
+<p><img src="/images/post/2017-08-10/facebook.png" alt></p>
+<ul>
+<li><a href="https://github.com/slwen/facebook-iterm-theme" target="_blank" rel="noopener">Facebook-iterm-Theme</a></li>
+</ul>
+<p><img src="/images/post/2017-08-10/oceanic.png" alt></p>
+<ul>
+<li><a href="https://github.com/mhartington/oceanic-next-iterm" target="_blank" rel="noopener">Oceanic-next-theme</a></li>
+</ul>
+<p>이제 불러오기만 하면 끝나겠군요.</p>
+<p>폰트를 설정했을때와 동일하게<br><em>iTerm2-Preferences…</em></p>
+<p><img src="/images/post/2017-08-10/preferences.png" alt></p>
+<p><em>Profiles-Default-Colors-Color Presets…</em> 에서 <em>Import…</em> 로 해당 파일을 불러와 적용하면 끝납니다.</p>
+<p><img src="/images/post/2017-08-10/preferences_color.png" alt></p>
+<br>
+
+<hr>
+<h3 id="그-외-plugin-소개"><a href="#그-외-plugin-소개" class="headerlink" title="그 외 plugin 소개"></a>그 외 plugin 소개</h3><p>zshell을 사용하면서 편리한 plugin입니다.</p>
+<h4 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h4><p>zsh-syntax-highlighting으로 보다 더 빠르게 터미널을 사용할 수 있습니다.<br>한번에 명령어의 가능 여부를 확인할 수 있죠.</p>
+<p><img src="/images/post/2017-08-10/zsh_syntax.png" alt></p>
+<p><strong>설치 명령어</strong></p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
+
+<p>또는</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/zsh-users/zsh-syntax-highlighting.git</span><br><span class="line"><span class="meta">$</span> echo "source $&#123;(q-)PWD&#125;/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" &gt;&gt; $&#123;ZDOTDIR:-$HOME&#125;/.zshrc</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<p><strong>끝!</strong></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span>
   </nav>
 
 
@@ -589,7 +643,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

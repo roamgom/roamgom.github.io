@@ -202,375 +202,6 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2018/02/11/2018-02-11-writing_markdown/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="roamgom">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/roamgom.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="roamgom's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/02/11/2018-02-11-writing_markdown/" class="post-title-link" itemprop="url">Markdown 작성하기</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2018-02-11 23:45:02" itemprop="dateCreated datePublished" datetime="2018-02-11T23:45:02+09:00">2018-02-11</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-25 17:39:45" itemprop="dateModified" datetime="2019-08-25T17:39:45+09:00">2019-08-25</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Markdown-작성하기"><a href="#Markdown-작성하기" class="headerlink" title="Markdown 작성하기"></a>Markdown 작성하기</h1><h2 id="마크다운이란"><a href="#마크다운이란" class="headerlink" title="마크다운이란?"></a>마크다운이란?</h2><p>Github, Github Pages에서 보는 README를 보면 모두 <code>.md</code> 또는 <code>.markdown</code> 파일명으로 써져 있는걸 알 수 있습니다. 주로 기술 블로그 포스팅이나 프로젝트에 대한 설명을 써놓는게 대부분인데 특수기호, 문자를 이용하여 매우 간단한 문법으로 웹에서 빠른 컨텐츠 작성이 가능하죠. <del>Github 덕분이라 할수도..</del></p>
-<p><strong>Markdown</strong> 은 2004년 존 그루버에 의해 만들어 졌고, 플랫폼 상관없이 모든 에디터에서 작성이 가능합니다. 개발자들 사이에서 많이 쓰이는 Sublime Text, Atom, VSCode 같은 좋은 도구도 많지만 저는 <a href="https://typora.io/" target="_blank" rel="noopener"><strong>typora</strong></a> 를 적극! 추천합니다. (자세한 설명은 뒤에서 😀)</p>
-<br>
-
-
-
-<p>우선 장단점부터 설명하자면</p>
-<blockquote>
-<p><strong>장점</strong></p>
-<ol>
-<li>문법이 간결하다.</li>
-<li>텍스트 형태로 저장되기 때문에 용량이 적고 관리하기 용이하다.</li>
-<li>별도의 도구 없이 모든 에디터에서 작성가능하다.</li>
-<li>지원하는 프로그램과 플랫폼이 다양하다.</li>
-</ol>
-</blockquote>
-<blockquote>
-<p><strong>단점</strong></p>
-<ol>
-<li>표준이 지정되어 있지 않아 도구에 따라 변환방식이 달라 결과에 차이가 있다.</li>
-<li>HTML의 모든 마크업을 표현하는데 부족하다.</li>
-</ol>
-</blockquote>
-<br>
-
-
-
-<p>Github에서 오픈소스를 찾다보면, <code>README.md</code> 의 내용은 우리가 매일보는 HTML 웹페이지로 보입니다.</p>
-<img src="/images/post/2018-02-11/tensorflow.png">
-
-<p><em>이렇게 보이죠</em></p>
-<p>‘문서를 HTML로 작성했네?’라고 생각할 수 있지만, 창에 보이는 <code>Raw</code> 라는 버튼을 눌러보면</p>
-<img src="/images/post/2018-02-11/tensorflow_md.png">
-
-<p><em>생각한 것과 다르게 나오네요</em> 🤔</p>
-<p>이는 Github에서 마크다운으로 작성한 파일을 HTML로 자동 렌더링해주기 때문입니다.</p>
-<p>이 덕분에 빠르게 Repository에 대한 문서와 블로그 글과 같은 게시물을 빠르게 작성할 수 있는겁니다.</p>
-<p>이제, 마크다운 문법을 알아보도록 하죠.</p>
-<br>
-
-<br>
-
-<h2 id="마크다운-문법"><a href="#마크다운-문법" class="headerlink" title="마크다운 문법"></a>마크다운 문법</h2><h4 id="문단-구분"><a href="#문단-구분" class="headerlink" title="문단 구분"></a>문단 구분</h4><p>기본적으로 마크다운은 모든 문법에서 문단 사이의 빈줄(엔터 두번)으로 구분합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">문단 하나</span><br><span class="line"></span><br><span class="line">문단 둘</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<br>
-
-
-
-<h4 id="헤더-Headers"><a href="#헤더-Headers" class="headerlink" title="헤더(Headers)"></a>헤더(Headers)</h4><p>헤더는 HTML에서 쓰는 <code>&lt;h1&gt;, &lt;h2&gt;, ..., &lt;h6&gt;</code> 와 같이 큰제목을 쓸 때 사용합니다.</p>
-<blockquote>
-<p>큰제목 | 작은 제목</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">문서의 큰 제목입니다</span><br><span class="line">=====================</span><br><span class="line"></span><br><span class="line">문서의 작은 제목입니다</span><br><span class="line">---------------------</span><br></pre></td></tr></table></figure>
-
-<h1 id="문서의-큰-제목입니다"><a href="#문서의-큰-제목입니다" class="headerlink" title="문서의 큰 제목입니다"></a>문서의 큰 제목입니다</h1><h2 id="문서의-작은-제목입니다"><a href="#문서의-작은-제목입니다" class="headerlink" title="문서의 작은 제목입니다"></a>문서의 작은 제목입니다</h2><p><br><br></p>
-<blockquote>
-<p>글머리</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># H1 제목</span><br><span class="line">## H2 제목</span><br><span class="line">### H3 제목</span><br><span class="line">#### H4 제목</span><br><span class="line">##### H5 제목</span><br><span class="line">###### H6 제목</span><br></pre></td></tr></table></figure>
-
-<h1 id="H1-제목"><a href="#H1-제목" class="headerlink" title="H1 제목"></a>H1 제목</h1><h2 id="H2-제목"><a href="#H2-제목" class="headerlink" title="H2 제목"></a>H2 제목</h2><h3 id="H3-제목"><a href="#H3-제목" class="headerlink" title="H3 제목"></a>H3 제목</h3><h4 id="H4-제목"><a href="#H4-제목" class="headerlink" title="H4 제목"></a>H4 제목</h4><h5 id="H5-제목"><a href="#H5-제목" class="headerlink" title="H5 제목"></a>H5 제목</h5><h6 id="H6-제목"><a href="#H6-제목" class="headerlink" title="H6 제목"></a>H6 제목</h6><h6 id="H7은"><a href="#H7은" class="headerlink" title="# H7은?"></a># H7은?</h6><p><br><br></p>
-<h4 id="문단"><a href="#문단" class="headerlink" title="문단"></a>문단</h4><blockquote>
-<p>블럭인용구</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; 블럭인용</span><br><span class="line">&gt;&gt; 블럭 1</span><br><span class="line">&gt;&gt;&gt; - 내용 1-1</span><br><span class="line">&gt;&gt;&gt; - 내용 1-2</span><br><span class="line">&gt;&gt; 블럭 2</span><br><span class="line">&gt;&gt;&gt; 내용 2-1</span><br><span class="line">&gt;&gt;&gt; 내용 2-2</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>블럭인용</p>
-<blockquote>
-<p>블럭 1</p>
-<blockquote>
-<ul>
-<li>내용 1-1</li>
-<li>내용 1-2</li>
-</ul>
-</blockquote>
-<p>블럭 2</p>
-<blockquote>
-<p>내용 2-1</p>
-<p>내용 2-2</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<br>
-
-<br>
-
-
-
-<h4 id="강조"><a href="#강조" class="headerlink" title="강조"></a>강조</h4><blockquote>
-<p>이탤릭체</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*이탤릭체* 또는 _이탤릭체_</span><br></pre></td></tr></table></figure>
-
-<p><em>이탤릭체</em>  또는 <em>이탤릭체</em></p>
-<blockquote>
-<p>굵은 글씨</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**굵은 글씨** 또는 __굵은 글씨__ 아니면 ***굵은 이탤릭체***</span><br></pre></td></tr></table></figure>
-
-<p><strong>굵은 글씨</strong> 또는 <strong>굵은 글씨</strong> 아니면 <strong><em>굵은 이탤릭체</em></strong></p>
-<blockquote>
-<p>밑줄</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;밑줄&lt;/u&gt;</span><br></pre></td></tr></table></figure>
-
-<p><u>밑줄</u></p>
-<blockquote>
-<p>취소선</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~취소선~~</span><br></pre></td></tr></table></figure>
-
-<p><del>취소선</del></p>
-<h4 id="구분선"><a href="#구분선" class="headerlink" title="구분선"></a>구분선</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">- - -</span><br><span class="line">----------------</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">***</span><br><span class="line">가로선</span><br></pre></td></tr></table></figure>
-
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<p>가로선</p>
-<p><br><br></p>
-<h4 id="목록"><a href="#목록" class="headerlink" title="목록"></a>목록</h4><blockquote>
-<p>순서 목록(번호)</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 첫번째 목록</span><br><span class="line">2. 두번째 목록</span><br><span class="line">3. 세번째 목록</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>첫번째 목록</li>
-<li>두번째 목록</li>
-<li>세번째 목록</li>
-</ol>
-<p>※ <strong>기본 내림차순으로 작성됩니다</strong></p>
-<br>
-
-
-
-<blockquote>
-<p>순서 없는 목록(글머리)</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">* 목록</span><br><span class="line">* 목록</span><br><span class="line">	* 내용</span><br><span class="line">	* 내용</span><br><span class="line">		* 본문</span><br><span class="line">			* 그 다음?</span><br><span class="line">- 목록</span><br><span class="line">- 목록</span><br><span class="line">	- 내용</span><br><span class="line">	- 내용</span><br><span class="line">		- 본문</span><br><span class="line">			- 그 다음?</span><br><span class="line">* 목록</span><br><span class="line">* 목록</span><br><span class="line">	- 내용</span><br><span class="line">		+ 본문</span><br><span class="line">	- 내용</span><br><span class="line">		+ 본문</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>목록</li>
-<li>목록<ul>
-<li>내용</li>
-<li>내용<ul>
-<li>본문<ul>
-<li>그 다음?</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>목록</li>
-<li>목록<ul>
-<li>내용<ul>
-<li>본문</li>
-</ul>
-</li>
-<li>내용<ul>
-<li>본문</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><br><br></p>
-<h4 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h4><blockquote>
-<p>코드 문맥, 블럭</p>
-</blockquote>
-<p>탭(Tab) 1개 또는 공백 4개를 사용합니다.</p>
-<p>문맥과 코드는 원하는 부분을 ` 3개를 앞 뒤에 붙여 줍니다.</p>
-<p>코드 같은 경우, 앞의 `3개 뒤에 언어를 써주면 자동 syntax 처리가 됩니다.</p>
-<p><code>파일명 블럭</code> 또는 <code>변수명 블럭</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">코드 블럭</span><br><span class="line">여러 줄 입력 가능</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>언어 별 코드</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hola</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hola!"</span>)</span><br><span class="line">hola()</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h4 id="URL-링크"><a href="#URL-링크" class="headerlink" title="URL 링크"></a>URL 링크</h4><blockquote>
-<p>인라인(Inline) 링크</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Google 링크](https://google.com &quot;구글로 이동&quot;)</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://google.com" target="_blank" rel="noopener">Google 링크</a></p>
-<blockquote>
-<p>자동링크</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://roamgom.github.io/&gt;</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://roamgom.github.io/">https://roamgom.github.io/</a></p>
-<p><br><br></p>
-<h4 id="이미지"><a href="#이미지" class="headerlink" title="이미지"></a>이미지</h4><blockquote>
-<p>이미지 링크</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![이미지 설명](/경로/이미지.jpg)</span><br></pre></td></tr></table></figure>
-
-<img src="/images/roamgom.jpg">
-
-
-
-<blockquote>
-<p>이미지 사이즈 조절</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;/경로/이미지.jpg&quot; width=&quot;가로&quot; height=&quot;세로&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<img src="/images/roamgom.jpg" width="400">
-
-
-
-<p><br><br></p>
-<h4 id="표-테이블"><a href="#표-테이블" class="headerlink" title="표(테이블)"></a>표(테이블)</h4><blockquote>
-<p> 표 만들기</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 1 | 2 | 3 | 4 | 5 |</span><br><span class="line">|---|---|---|---|---|</span><br><span class="line">| a | b | c | d | e |</span><br><span class="line">| f | g | h | i | j |</span><br><span class="line">| k | l | m | n | o |</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>a</td>
-<td>b</td>
-<td>c</td>
-<td>d</td>
-<td>e</td>
-</tr>
-<tr>
-<td>f</td>
-<td>g</td>
-<td>h</td>
-<td>i</td>
-<td>j</td>
-</tr>
-<tr>
-<td>k</td>
-<td>l</td>
-<td>m</td>
-<td>n</td>
-<td>o</td>
-</tr>
-</tbody></table>
-<p>테이블 생성하는데 시간이 많이 걸리네요.</p>
-<p><a href="http://www.tablesgenerator.com/markdown_tables" target="_blank" rel="noopener"><strong>이 사이트</strong></a> 를 사용하면 테이블을 생성할 수 있습니다. (상당히 어려워요)</p>
-<p><br><br></p>
-<hr>
-<p>제가 알고 있는 마크다운 문법은 이렇게 정리되네요. <del>상당하쥬?</del></p>
-<p>양은 많아 보이지만 막상 사용하다보면 충분히 적응할 수 있을거에요.</p>
-<p>자신이 배운 내용, 프로젝트에 대한 설명은 이제 마크다운 하나로 해결할 수 있습니다!!</p>
-<p>…</p>
-<br>
-
-<h3 id="typora"><a href="#typora" class="headerlink" title="typora"></a>typora</h3><p>앞서 추천한 <a href="https://typora.io/" target="_blank" rel="noopener"><strong>typora</strong></a> 입니다.</p>
-<img src="/images/post/2018-02-11/typora.gif">
-
-
-
-<p>typora 사이트에 들어가서 특징을 보면 매우 특이합니다.</p>
-<p>앞서 얘기한 기본 마크다운 문법 뿐 아니라, 수식, 도표 같은 형식도 지원해줍니다.</p>
-<img src="/images/post/2018-02-11/typora_about.png">
-
-
-
-<p>무엇보다 마음에 드는 부분은 마크다운 문서를 작성하면서 결과 화면을 같이 볼 수 있다는 점이네요.</p>
-<img src="/images/post/2018-02-11/typora_type.gif">
-
-<br>
-
-
-
-<p>자, 이렇게 마크다운에 대한 문법을 알아보았으니</p>
-<p>모두 깃헙 문서와 블로그 글을 쓰러 가시죠! 😎</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2018/02/05/2018-02-05-python_3.6_description/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -677,11 +308,155 @@
   </article>
 
     
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2017/09/30/2017-09-30-what_is_gist/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="roamgom">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/roamgom.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="roamgom's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2017/09/30/2017-09-30-what_is_gist/" class="post-title-link" itemprop="url">What is Gist?</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2017-09-30 11:30:00" itemprop="dateCreated datePublished" datetime="2017-09-30T11:30:00+09:00">2017-09-30</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-08-25 15:10:36" itemprop="dateModified" datetime="2019-08-25T15:10:36+09:00">2019-08-25</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="gist란"><a href="#gist란" class="headerlink" title="gist란?"></a>gist란?</h1><p>커뮤니티나 채팅방에 자신이 만든 코드에 대해 피드백을 받으려는 경우, 대부분 작성한 코드를 전부 복사하여 그대로 붙여넣는 경우가 많습니다.</p>
+<p>이는 보는 입장에서 가독성이 매우 떨어지고, 채팅방에서 피드백을 원할하게 전달하는데 어려움을 겪죠.</p>
+<p>Github에서 지원해주는 Gist를 사용하면 이 모든 걸 편하게 해결할 수 있습니다.</p>
+<img src="/images/post/2017-09-30/gist_page.png">
+
+
+<blockquote>
+<p>gist 주소 : <a href="https://gist.github.com/" target="_blank" rel="noopener">https://gist.github.com/</a></p>
+</blockquote>
+<p>gist는 주로 오픈소스, 또는 프로젝트를 진행할 때 서로 작성한 코드를 공유하거나 피드백을 요구할 때 자주 쓰입니다.</p>
+<br>
+
+<h2 id="gist의-장점"><a href="#gist의-장점" class="headerlink" title="gist의 장점"></a>gist의 장점</h2><ol>
+<li>확장자(python의 경우 .py / C++의 경우 .cpp .h)에 따라 작성한 code에 syntax highlight를 적용시켜 줍니다.</li>
+<li>작성한 코드에 대해 comment를 작성하여 피드백을 즉시 받을 수 있습니다.</li>
+<li>코드를 단순히 url을 공유하는 걸 넘어, 블로그의 글에 embed하여 작성할 수 있습니다.</li>
+<li>Markdown 문법을 지원합니다.</li>
+</ol>
+<br>
+
+<p>음.. 아직은 무슨 말인지 이해가 안될수도 있지만…<br>이 글을 통해 gist에 대해 완벽하게 짚고 넘어가시길 바랍니다.</p>
+<img src="/images/post/2017-09-30/gist_info.png">
+
+<blockquote>
+<p>gist main page</p>
+</blockquote>
+<ul>
+<li>Gist description - 자신이 작성한 코드에 대해 간단한 설명을 기재합니다.</li>
+<li>Filename - 자신이 작성할 파일명입니다. 확장자까지 입력해줘야 syntax highlight가 처리됩니다.</li>
+<li>코드 입력부분은 자신이 사용한 언어에 따라 highlight가 자동 처리됩니다.</li>
+</ul>
+<br>
+
+<blockquote>
+<p>예를 들어, python에서 “hello world!”를 입력할 경우,</p>
+</blockquote>
+<img src="/images/post/2017-09-30/gist_write.png">
+
+<p>처럼 입력을 한 뒤, public gist로 저장을 합니다.</p>
+<p>검색을 통해 열람할 수 있는 public gist와 달리, secret gist는 URL만을 통해 열람할 수 있습니다.</p>
+<p>이렇게 gist를 생성하면..</p>
+<br>
+
+<img src="/images/post/2017-09-30/gist_post_info.png">
+
+<p>제가 사용한 python 언어에 따라 syntax highlighting이 처리된 코드가 나옵니다.</p>
+<ul>
+<li>Embed - 블로그 혹은 카페의 글에 해당 코드를 포함하고 싶을때, embed 코드로 넣을 수 있습니다.</li>
+<li>comment - 자신 혹은 다른 사람이 해당 코드에 대해, 피드백 또는 설명을 넣을 수 있습니다. (코드 작성할 때와 동일합니다.)</li>
+</ul>
+<p>만약, 자신이 코드 파일의 형태가 아니라 설명과 코드를 같이 넣고 싶다 하는 분은 <strong>Markdown</strong> 양식을 통해 gist를 올려도 무방합니다.</p>
+<img src="/images/post/2017-09-30/write_markdown.png">
+
+<blockquote>
+<p>gist 작성</p>
+</blockquote>
+<img src="/images/post/2017-09-30/write_markdown_result.png">
+
+<blockquote>
+<p>작성한 글 형태</p>
+</blockquote>
+<p><strong>하지만</strong></p>
+<p>저는 위에는 코드 파일로 기재를 하고, comment와 주석을 통해 추가 설명을 하는게 편합니다만..</p>
+<p>선택은 스스로 편한 방식으로 사용하시면 될것 같습니다.  ^_^</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -729,7 +504,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
