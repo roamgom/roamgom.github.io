@@ -54,28 +54,35 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="roamgom&#39;s blog">
-<meta property="og:url" content="https://roamgom.github.io/index.html">
+  <meta name="description" content="시간복잡도 (Time Complexity)알고리즘 공부에서 절대 빠질 수 없는 요소가 바로 시간복잡도이다. 많은 코딩테스트에서도 따지는 부분이며, 실제 업무에도 많이 활용되기 때문에 시간복잡도는 최적화 공부에 도움이 되는 부분이다.  인프런에서 무료로 강의를 제공하고 있다.-&amp;gt; 링크  시간 복잡도(Time complexity)는 코드의 실행 시간을 측">
+<meta name="keywords" content="TIL,Algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Time Complexity">
+<meta property="og:url" content="https://roamgom.github.io/2020/03/31/algo_time_complexity/index.html">
 <meta property="og:site_name" content="roamgom&#39;s blog">
+<meta property="og:description" content="시간복잡도 (Time Complexity)알고리즘 공부에서 절대 빠질 수 없는 요소가 바로 시간복잡도이다. 많은 코딩테스트에서도 따지는 부분이며, 실제 업무에도 많이 활용되기 때문에 시간복잡도는 최적화 공부에 도움이 되는 부분이다.  인프런에서 무료로 강의를 제공하고 있다.-&amp;gt; 링크  시간 복잡도(Time complexity)는 코드의 실행 시간을 측">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://user-images.githubusercontent.com/24652225/78017831-d46e5080-7387-11ea-8f50-f628a34b91be.png">
+<meta property="og:updated_time" content="2020-03-31T10:47:12.832Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="roamgom&#39;s blog">
-  <link rel="canonical" href="https://roamgom.github.io/">
+<meta name="twitter:title" content="Time Complexity">
+<meta name="twitter:description" content="시간복잡도 (Time Complexity)알고리즘 공부에서 절대 빠질 수 없는 요소가 바로 시간복잡도이다. 많은 코딩테스트에서도 따지는 부분이며, 실제 업무에도 많이 활용되기 때문에 시간복잡도는 최적화 공부에 도움이 되는 부분이다.  인프런에서 무료로 강의를 제공하고 있다.-&amp;gt; 링크  시간 복잡도(Time complexity)는 코드의 실행 시간을 측">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/24652225/78017831-d46e5080-7387-11ea-8f50-f628a34b91be.png">
+  <link rel="canonical" href="https://roamgom.github.io/2020/03/31/algo_time_complexity/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>roamgom's blog</title>
+  <title>Time Complexity | roamgom's blog</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -196,12 +203,13 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+
   <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block home">
+  <div class="post-block post">
     <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2020/03/31/algo_time_complexity/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,9 +222,8 @@
       <meta itemprop="name" content="roamgom's blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/03/31/algo_time_complexity/" class="post-title-link" itemprop="url">Time Complexity</a>
+        <h1 class="post-title" itemprop="name headline">Time Complexity
+
           
         </h1>
 
@@ -250,7 +257,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="시간복잡도-Time-Complexity"><a href="#시간복잡도-Time-Complexity" class="headerlink" title="시간복잡도 (Time Complexity)"></a>시간복잡도 (Time Complexity)</h1><p>알고리즘 공부에서 절대 빠질 수 없는 요소가 바로 시간복잡도이다. 많은 코딩테스트에서도 따지는 부분이며, 실제 업무에도 많이 활용되기 때문에 시간복잡도는 최적화 공부에 도움이 되는 부분이다.</p>
+        <h1 id="시간복잡도-Time-Complexity"><a href="#시간복잡도-Time-Complexity" class="headerlink" title="시간복잡도 (Time Complexity)"></a>시간복잡도 (Time Complexity)</h1><p>알고리즘 공부에서 절대 빠질 수 없는 요소가 바로 시간복잡도이다. 많은 코딩테스트에서도 따지는 부분이며, 실제 업무에도 많이 활용되기 때문에 시간복잡도는 최적화 공부에 도움이 되는 부분이다.</p>
 <blockquote>
 <p>인프런에서 무료로 강의를 제공하고 있다.<br>-&gt; <a href="https://www.inflearn.com/course/%EC%BD%94%EB%94%A9-%EC%9D%B8%ED%84%B0%EB%B7%B0/dashboard" target="_blank" rel="noopener">링크</a></p>
 </blockquote>
@@ -287,118 +294,54 @@
 <p>참고 출처<br><a href="https://en.wikipedia.org/wiki/Time_complexity" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Time_complexity</a><br><a href="https://blog.chulgil.me/algorithm/" target="_blank" rel="noopener">https://blog.chulgil.me/algorithm/</a></p>
 </blockquote>
 
-        
-      
     </div>
 
     
     
     
+        
+      
+
       <footer class="post-footer">
-          <div class="post-eof"></div>
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/TIL/" rel="tag"><i class="fa fa-tag"></i> TIL</a>
+            
+              <a href="/tags/Algorithm/" rel="tag"><i class="fa fa-tag"></i> Algorithm</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/03/09/program_middleware/" rel="next" title="Middleware">
+                  <i class="fa fa-chevron-left"></i> Middleware
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
         
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2020/03/09/program_middleware/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="roamgom">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/roamgom.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="roamgom's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/03/09/program_middleware/" class="post-title-link" itemprop="url">Middleware</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2020-03-09 15:50:47 / Modified: 16:49:27" itemprop="dateCreated datePublished" datetime="2020-03-09T15:50:47+09:00">2020-03-09</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Middleware"><a href="#Middleware" class="headerlink" title="Middleware"></a>Middleware</h1><p>아래는 Wikipedia에서 Middleware에 대한 정의이다.</p>
-<blockquote>
-<p>Middleware is computer software that provides services to software applications beyond those available from the operating system.</p>
-</blockquote>
-<p>우리가 OS 위에서 소프트웨어를 실행하면 미들웨어는 해당 소프트웨어와 OS 사이에서 여러 서비스를 제공한다는 말인데</p>
-<p><a href="https://en.wikipedia.org/wiki/Middleware#/media/File:Linux_kernel_and_gaming_input-output_latency.svg" target="_blank" rel="noopener">Wikipedia 이미지</a> 를 보면 Linux 환경에서 게임을 실행했을 때, 일어나는 여러 이벤트 구조를 HW/SW 로 나누어진 걸 볼 수 있다. 여기서 미들웨어는 Linux kernel과 Game 사이에서 일어나는 Input, Output에 대한 처리를 해준다.</p>
-<p>우리가 흔히 접하는 미들웨어는 Database middleware, Application server middleware, Message-oriented middleware, Web middleware 등이 있다.</p>
-<p>Python 백엔드 공부를 하며 만난 <a href="https://gunicorn.org/" target="_blank" rel="noopener">Gunicorn</a>과 같은 WSGI 또한 미들웨어이다.</p>
-<blockquote>
-<p>스포카에서 WSGI에 대해 작성한 글 <a href="https://spoqa.github.io/2012/01/16/wsgi-and-flask.html" target="_blank" rel="noopener">링크</a></p>
-</blockquote>
-<p>OS를 포함한 전체적인 구조를 대강 그려본다면 아래와 같다.</p>
-<p><img src="https://user-images.githubusercontent.com/24652225/76192718-d9772e80-6225-11ea-96cc-bb52b7962246.png" alt="structure"></p>
-<hr>
-<p>가끔 듣는 펌웨어(Firmware)와 헷갈리는 부분도 있어서 찾아보았다.<br><a href="https://superuser.com/questions/707405/differences-between-firmware-and-middleware-and-device-driver" target="_blank" rel="noopener">Reference</a></p>
-<p>펌웨어는 주로 assembly 또는 C로 짜여져 있으며, 하드웨어 위에서 실행된다. 대표적인 예로, BIOS가 있다.</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
   </div>
-  
-  
-  
-  </article>
-
-    
-  </div>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
 
 
           </div>
@@ -417,6 +360,11 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc" data-target="post-toc-wrap">
@@ -429,6 +377,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#시간복잡도-Time-Complexity"><span class="nav-number">1.</span> <span class="nav-text">시간복잡도 (Time Complexity)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Big-O-Notation"><span class="nav-number">1.0.1.</span> <span class="nav-text">Big-O Notation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-O-1-상수형-constant"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">1. O(1) 상수형 (constant)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-O-log-N-로그형-log"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">2. O(log N) 로그형 (log)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-O-N-선형-linear"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">3. O(N) 선형 (linear)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-O-N-2-제곱형-quadratic"><span class="nav-number">1.0.1.4.</span> <span class="nav-text">4. O(N^2) 제곱형 (quadratic)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-O-2-N-거듭제곱형-power-O-N-계승형-factorial"><span class="nav-number">1.0.1.5.</span> <span class="nav-text">5.O(2^N) 거듭제곱형 (power), O(N!) : 계승형 (factorial)</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
