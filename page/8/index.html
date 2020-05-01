@@ -202,6 +202,118 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2017/09/19/2017-09-19-pip_list_warning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="roamgom">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/roamgom.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="roamgom's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2017/09/19/2017-09-19-pip_list_warning/" class="post-title-link" itemprop="url">pip list --format=(legacy|columns) 경고 해결하기</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2017-09-19 13:00:00" itemprop="dateCreated datePublished" datetime="2017-09-19T13:00:00+09:00">2017-09-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-08-25 17:23:35" itemprop="dateModified" datetime="2019-08-25T17:23:35+09:00">2019-08-25</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="pip-list-출력-포맷-방식-변경"><a href="#pip-list-출력-포맷-방식-변경" class="headerlink" title="pip list 출력 포맷 방식 변경"></a>pip list 출력 포맷 방식 변경</h1><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> pip list</span><br></pre></td></tr></table></figure>
+
+<p><strong>Python3.6</strong>에서 pip를 사용하다보면</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DEPRECATION:The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.</span><br></pre></td></tr></table></figure>
+
+<p>이라는 문구가 뜨면서 설치된 패키지의 리스트가 나온다.</p>
+<p>매우 보기 싫은 문구이다. 고쳐보자.</p>
+<br>
+
+<h4 id="1-디렉토리-생성하기"><a href="#1-디렉토리-생성하기" class="headerlink" title="1. 디렉토리 생성하기"></a>1. 디렉토리 생성하기</h4><blockquote>
+<p>Mac / Linux 동일</p>
+</blockquote>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir -p $HOME/.pip</span><br><span class="line"><span class="meta">$</span> vi $HOME/.pip/pip.conf</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>.pip 디렉토리를 만들어주고, pip.conf파일 생성</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">timeout = 60</span><br><span class="line"></span><br><span class="line">[freeze]</span><br><span class="line">timeout = 10</span><br><span class="line"></span><br><span class="line">[list]</span><br><span class="line">format = (legacy | columns)</span><br></pre></td></tr></table></figure>
+
+<p>위 내용을 안에 기재해준다.<br>format에서 legacy 또는 columns 형식을 정해주면 된다.<br>(개인적으로 columns가 마음에 든다)</p>
+<br>
+> legacy의 경우
+<img src="/images/post/2017-09-19/legacy.png">
+
+
+<br>
+> columns의 경우
+
+<img src="/images/post/2017-09-19/columns.png">
+
+
+<p>이제 <code>pip list</code>를 입력하면 깔끔하게 잘 나온다.</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2017/09/19/2017-09-19-sublime_vscode_terminal/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -339,204 +451,6 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2017/09/19/2017-12-31-RE_2017/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="roamgom">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/roamgom.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="roamgom's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2017/09/19/2017-12-31-RE_2017/" class="post-title-link" itemprop="url">RE: 2017</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2017-09-19 13:00:00" itemprop="dateCreated datePublished" datetime="2017-09-19T13:00:00+09:00">2017-09-19</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-25 17:30:54" itemprop="dateModified" datetime="2019-08-25T17:30:54+09:00">2019-08-25</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="회고록"><a href="#회고록" class="headerlink" title="회고록"></a>회고록</h1><p>회고록을 작성하기 전에 많은 고민을 했다. 올해 스스로 배운게 적다고 생각했고, 많이 부족한 상태에서 쓰면 큰 도움이 안될거라 생각했으나<br>평소에 일기조차 생각도 안하는 자신에게 적어도 1년 동안의 일을 적는게 후의 내게 되돌아 볼 기회를 주지 않을까 싶어 글로 남기게 되었다.</p>
-<hr>
-<h2 id="2017"><a href="#2017" class="headerlink" title="2017"></a><strong>2017</strong></h2><p>&lt; 월 별 정리 &gt;</p>
-<blockquote>
-<p>1월 : 전역, 남미 여행, 파이썬 공부 시작</p>
-</blockquote>
-<blockquote>
-<p>2월 : 본격 공부시즌</p>
-</blockquote>
-<blockquote>
-<p>3월 : 개강</p>
-</blockquote>
-<blockquote>
-<p>4-6월 : 학교 생활, 각종 밋업</p>
-</blockquote>
-<blockquote>
-<p>7-9월 : 파이썬 스터디 주도, 파이콘, 드론 제작, DRF스터디</p>
-</blockquote>
-<blockquote>
-<p>10월 : 개강, 장고걸스 운영진 합류!, 깈헙</p>
-</blockquote>
-<blockquote>
-<p>11-12월 : 첫 외주, 패캠 보조강사(크롤링)</p>
-</blockquote>
-<hr>
-<h3 id="전역"><a href="#전역" class="headerlink" title="전역"></a><strong>전역</strong></h3><p>정확히 전역날짜는 2016년 12월이었지만 당시 신년 직전에 사회로 복귀하니 새로운 시작을 생각하며 여러 목표를 세워보았다. (실행은…ㅎㅎ)</p>
-<br>
-
-<h3 id="남미-여행"><a href="#남미-여행" class="headerlink" title="남미 여행"></a><strong>남미 여행</strong></h3><p>전역을 하자마자 엄마와 함께 남미 여행을 했다. 패키지 여행이 아니라 처음으로 혼자 계획을 세워본 의미있는 여행이었다. (더군다나 혼자 여행이 아니라 생각보다 힘들었다.)</p>
-<p>페루를 시작으로 볼리비아-칠레-아르헨티나까지(브라질도 있지만 고작 몇시간이었다.) 1월 3일부터 24일까지 총 22일로 다녀왔다.</p>
-<p>죽기 전 꼭 가봐야한다는 마추피추부터 우유니, 그리고 제일 인상깊었던 칠레의 푸콘, 이과수 폭포까지 정말 짧은 기간안에 많은 일정이었다.</p>
-<img src="/images/post/2017-12-31/south_america.png">
-
-<blockquote>
-<p>잘 찍힌건 다 뒤통수</p>
-</blockquote>
-<p>마추피추 위에서 컵라면을 먹는다던지, 우유니 사막에서 방금이라도 옆에 벼락이 떨어질 것 같은 시커먼 폭우 속에서 지프로 이동한 것과 푸콘의 비야리카 화산 위에서 썰매를 타고 내려온 것까지… 상당히 하드코어했다.</p>
-<p>역시 난 조금 힘들어도 패키지보다는 배낭 여행이 훨씬 좋은 것 같더라.</p>
-<br>
-
-<h3 id="Python-입문"><a href="#Python-입문" class="headerlink" title="Python 입문"></a><strong>Python 입문</strong></h3><p>예전까지만해도 사용해 본 C, 베이직 계열 언어만 알고 있던 나에게 친구들의 좋은 약팔이(?) 덕에 <code>깐깐하게 배우는 파이썬 [by Zed A. Shaw]</code>로 파이썬을 배우기 시작했다.</p>
-<img src="/images/post/2017-12-31/learn_python_hard_way.jpg">
-
-<p>파이썬은 정말 신세계였다! 여태 본 코드와 다르게 눈에 촼 들어오는 코드부터 많은 패키지까지, 예전에 코딩을 할 때 지루해 하던 나의 표정은 어느새 웃고 있었다더라.</p>
-<p>무엇보다 각종 파이썬 세미나, 밋업을 통해 여러 사람들끼리 대화를 나누는 모습, 내용이 매우 흥미로웠다.</p>
-<br>
-
-<h3 id="본격-공부-시작"><a href="#본격-공부-시작" class="headerlink" title="본격 공부 시작!"></a><strong>본격 공부 시작!</strong></h3><img src="/images/post/2017-12-31/django.svg">
-
-<p>파이썬 기초는 공부했겠다 싶을 무렵, “언어를 배웠으니 개발하셔야죠?” 라며 나에게 Django 프레임워크를 추천해 준 친구가 있었다.(<del>약팔이</del>)</p>
-<p>고등학생 때 HTML과 CSS를 공부해봤지만 개발은 전혀 해보지 않았으니, 막상 배우려니 많이 두려웠다.</p>
-<p>그렇게 공부를 하는 중, 나에게 다가온 것은….</p>
-<br>
-
-<h3 id="개-강"><a href="#개-강" class="headerlink" title="개 강"></a><strong>개 강</strong></h3><p>정말 이때까지만 해도 개강이 좋다고 생각했다. 학교로 돌아와 배우는게 즐거울거라 기대하며 학기를 시작했다. 수업 내용은 재미있었다. 처음 사용해 본 DB, C++와 여러 이론까지 흥미로웠다. <del>응 과제</del></p>
-<p>새로 가입한 동아리에서도 리버싱 스터디도 해보았지만 보안은 아직 흥미가 없더라.</p>
-<br>
-
-<h3 id="밋업"><a href="#밋업" class="headerlink" title="밋업"></a><strong>밋업</strong></h3><p>하나를 제대로 공부하기 이전에 다른 사람들은 무엇을 공부하고, 개발하는지 알기 위해 커뮤니티 활동을 많이 알아보았다.<br>정말 거의 모든 개발 관련 세미나, 밋업은 다 신청해본 것 같다.<br>행사를 통해 정말 많은 분야를 보고 많은 사람도 만날 수 있었다.</p>
-<img src="/images/post/2017-12-31/facebook.png">
-
-<blockquote>
-<p>모임에 하였습니다 참여신청</p>
-</blockquote>
-<br>
-
-<h3 id="파이썬-스터디-드론"><a href="#파이썬-스터디-드론" class="headerlink" title="파이썬 스터디 + 드론"></a><strong>파이썬 스터디 + 드론</strong></h3><p>여름방학 직전에 동아리 사람을 모아 방학 기간에 스터디를 주도해보았다. 기초부터 패키지 사용까지 해보며 알려주는 동시에 스스로 복습할 수 있었다. 끝난 후에 많은 피드백과 앵콜까지 받았으니 매우 뿌듯 한 스터디였다.</p>
-<img src="/images/post/2017-12-31/pycon2017.png">
-
-<p>8월에 진행된 파이콘을 통해 컨퍼런스의 재미를 느낄 수 있었다. 처음 듣는 내용으로 관심을, 친구와 지인을 통해 또 다른 만남을 경험할 수 있는 기회였다.<br><code>???: 그래서 내년 파이콘 때 발표하셔야죠?</code></p>
-<p>교외로는 9월부터 DRF(Django REST Framework)스터디를 진행하여 나에게 또 다른 신선한 충격을 주었다. 아마도 여기서 Django의 진정한 매력을 느낀 것 같다.</p>
-<p>또한 방학기간에 소규모 프로젝트를 진행하게 되었다. 학교 주최로 이루어진 3D 프린터를 활용한 IOT 작품을 만드는 프로그램에서 친구들과 직접 기후측정용 드론을 만들어 날려보았다.</p>
-<p>출력과 구매를 통해 드론을 제작하며 나는 그 위에 쓰이는 센서 부분을 담당하게 되었다. 이 때 아두이노를 사용하여 온습도, 먼지, 기압센서등으로 측정한 값을 와이파이를 통해 폰 어플(Blynk)로 보내며 비행까지 성공적으로 마무리하였다.</p>
-<img src="/images/post/2017-12-31/drone.jpeg">
-
-<blockquote>
-<p>난다요! 잘 난다요</p>
-</blockquote>
-<br>
-
-<h3 id="Again-개X강"><a href="#Again-개X강" class="headerlink" title="Again.. 개X강"></a><strong>Again.. 개X강</strong></h3><p>솔직히 이 기간이 나에게 가장 힘들면서도 많은 고민이 생긴 때였다. 막상 학교로 돌아와 배우며 개인 공부와 외부 스터디를 진행하다보니 역시 두마리 토끼를 둘 다 잡기 힘들더라.. <del>과제 ㅁㄴㅇㄹ</del><br>결국 외부 활동을 선택하고, 학교 공부는 수업만 열심히 들었다.<br>안녕 나의 학점 ㅠㅠ</p>
-<p>그래도 친구의 부탁으로 처음 Django로 간단한 PDF뷰어 사이트를 배포까지 해보며 다른 부분으로 성장을 할 수 있었다.</p>
-<br>
-
-<h3 id="Django-Girls"><a href="#Django-Girls" class="headerlink" title="Django Girls"></a><strong>Django Girls</strong></h3><img src="/images/post/2017-12-31/django_girls.png">
-
-<p>아마 올해 나에게 가장 의미를 가져다 준 커뮤니티가 아닐까.<br>처음에는 여성개발자를 대상으로 진행된 밋업을 시작으로 알게 되었다. 당시 있던 개발이란 단어가 포함된 모임은 있는대로 신청했던지라 신청 후 취소해야 하나 싶어 문의했는데 참여해도 된다는 답을 받아 행복했다.</p>
-<p>모임을 통해 개발 직군에서 있는 얘기를 많이 들을 수 있었고, 무엇보다 장고걸스의 가치관이 나와 많이 겹치는 게 마음에 들었다.</p>
-<p>이후 장고걸스의 모든 모임에 신청을 했고, 운 좋게 운영진으로 합류할 수 있었다. 더 많은 사람과 대화할 수 있고, 더 많이 배워갈 수 있음에 항상 감사하다.</p>
-<br>
-
-<h3 id="GEEKHUB"><a href="#GEEKHUB" class="headerlink" title="GEEKHUB"></a><strong>GEEKHUB</strong></h3><img src="/assets/geekhub.jpg">
-
-<p>전역을 하고 올해 친구의 권유로 들어온 깈헙은 특정 목적보다는 서로 사상이 비슷한 친구끼리 편하게 대화를 나누며 외로움을 달래준 곳이다. 무엇보다 나에게 큰 버팀목이 되어준 친구들을 만날 수 있어 좋았다. <del>내 손발!</del></p>
-<p>10월에 진행된 메이커페어에서 두 명의 친구가 만든 방탈출, 일명 <code>공대탈출</code> 부스를 같이 운영하며 내년에는 나도 작품을 만들어 전시해보고 싶은 충동을 심어주었다.</p>
-<br>
-
-<h3 id="마무리"><a href="#마무리" class="headerlink" title="-마무리-"></a><strong>-마무리-</strong></h3><p>다른 사람들의 회고록을 읽어보면 나보다 더 많이 배우고 다들 실력이 뛰어난 분들이 많다.</p>
-<p>나는 올 한해가 내가 새로운 걸 배우는 해가 아닌 나 자신을 찾게 된, <strong>복귀와 시작의 해</strong>라고 생각한다.<br>가끔 얘기를 나누다보면 혼자 너무 뒤쳐져 있다고 생각한다. 무엇보다, 나 스스로 평가하며 비판하고 피드백을 던지는 경향이 있어 방황한 적도 많다.</p>
-<p>다행인건 이러한 시기를 통해 내년을 위해 필요한 결정을 내릴 수 있었다.</p>
-<br>
-
-<hr>
-<blockquote>
-<p>내년계획</p>
-</blockquote>
-<ol>
-<li><strong>휴학</strong><br>- 제일 큰 결정이라고 생각한다. 부족한 학교 공부와 개인 공부를 위해 필요하다고 생각하여 내린 결정이다.  그리고, 기간을 잡아 혼자 여행을 다녀올까 생각이다.<br>대략 계획은 시베리아 횡단 열차를 타고 유럽을 지나 미국을 들러 지구 한바퀴~</li>
-<li><strong>Django 그리고 ML</strong><br>- 제일 중점적으로 공부할 부분은 Django와 ML이 될 것 같다. 목표는 학교 학생들을 대상으로 서비스 하나 런칭과 ML을 활용한 이미지 인식 앱 제작이다. 이에 필요한 수학 공부도 진행할 예정이다.</li>
-<li><strong>기타 공부(토플 등)</strong><br>- 실은 휴학을 하여 가장 먼저 생각한 공부가 토플 이었다. 아무래도 교환학생을 가보는게 좋은 경험이 되지 않을까 싶어 어느정도의 점수를 취득해 놓으려 한다.</li>
-</ol>
-<br>
-
-<p>막상 글을 다 쓰고 돌아보니 생각보다 많은 일들이 지나갔다. 글을 통해 스스로 되돌아 보는게 생각보다 나 자신에게 많은 것을 느끼게 해준 것 같다.</p>
-<p>부디 내년 한해도 모두 건강하고 즐겁게 보낼 수 있기를 기원하며</p>
-<img src="/images/post/2017-12-31/happy_new.png">
-
-<p>-FIN-</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
@@ -589,7 +503,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

@@ -54,28 +54,33 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="roamgom&#39;s blog">
-<meta property="og:url" content="https://roamgom.github.io/index.html">
+  <meta name="description" content="OSTEP01. Intro - Introduction codeVon Neumann 모델 - 프로세서가 프로그램이 완료될때까지 메모리로부터 명령어를 fetch하여, decode 후, execute 하는 과정을 반복한다. OS - 프로그램을 실행하고, 프로그램이 메모리를 공유하며, 다른 장치와 상호작용할 수 있도록 도와주는 소프트웨어를 뜻한다.  THE CRU">
+<meta name="keywords" content="TIL,OS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="os_intro">
+<meta property="og:url" content="https://roamgom.github.io/2020/05/01/os-intro/index.html">
 <meta property="og:site_name" content="roamgom&#39;s blog">
+<meta property="og:description" content="OSTEP01. Intro - Introduction codeVon Neumann 모델 - 프로세서가 프로그램이 완료될때까지 메모리로부터 명령어를 fetch하여, decode 후, execute 하는 과정을 반복한다. OS - 프로그램을 실행하고, 프로그램이 메모리를 공유하며, 다른 장치와 상호작용할 수 있도록 도와주는 소프트웨어를 뜻한다.  THE CRU">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-05-01T09:29:10.861Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="roamgom&#39;s blog">
-  <link rel="canonical" href="https://roamgom.github.io/">
+<meta name="twitter:title" content="os_intro">
+<meta name="twitter:description" content="OSTEP01. Intro - Introduction codeVon Neumann 모델 - 프로세서가 프로그램이 완료될때까지 메모리로부터 명령어를 fetch하여, decode 후, execute 하는 과정을 반복한다. OS - 프로그램을 실행하고, 프로그램이 메모리를 공유하며, 다른 장치와 상호작용할 수 있도록 도와주는 소프트웨어를 뜻한다.  THE CRU">
+  <link rel="canonical" href="https://roamgom.github.io/2020/05/01/os-intro/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>roamgom's blog</title>
+  <title>os_intro | roamgom's blog</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -196,12 +201,13 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+
   <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block home">
+  <div class="post-block post">
     <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2020/05/01/os-intro/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,9 +220,8 @@
       <meta itemprop="name" content="roamgom's blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/05/01/os-intro/" class="post-title-link" itemprop="url">os_intro</a>
+        <h1 class="post-title" itemprop="name headline">os_intro
+
           
         </h1>
 
@@ -250,7 +255,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="OSTEP"><a href="#OSTEP" class="headerlink" title="OSTEP"></a>OSTEP</h1><h1 id="01-Intro-Introduction-code"><a href="#01-Intro-Introduction-code" class="headerlink" title="01. Intro - Introduction code"></a>01. Intro - Introduction code</h1><p>Von Neumann 모델 - 프로세서가 프로그램이 완료될때까지 메모리로부터 명령어를 fetch하여, decode 후, execute 하는 과정을 반복한다.</p>
+        <h1 id="OSTEP"><a href="#OSTEP" class="headerlink" title="OSTEP"></a>OSTEP</h1><h1 id="01-Intro-Introduction-code"><a href="#01-Intro-Introduction-code" class="headerlink" title="01. Intro - Introduction code"></a>01. Intro - Introduction code</h1><p>Von Neumann 모델 - 프로세서가 프로그램이 완료될때까지 메모리로부터 명령어를 fetch하여, decode 후, execute 하는 과정을 반복한다.</p>
 <p>OS - 프로그램을 실행하고, 프로그램이 메모리를 공유하며, 다른 장치와 상호작용할 수 있도록 도와주는 소프트웨어를 뜻한다.</p>
 <hr>
 <h2 id="THE-CRUX-OF-THE-PROBLEM"><a href="#THE-CRUX-OF-THE-PROBLEM" class="headerlink" title="THE CRUX OF THE PROBLEM"></a>THE CRUX OF THE PROBLEM</h2><p><strong>리소스 가상화하기</strong><br>어떻게 OS는 리소스를 가상화(virtualize) 시키는 것일까?<br>이유는 당연히 시스템을 더 쉽게 사용할 수 있도록 만들기 위해서일 것이다.<br>결국, OS가 어떤 매커니즘과 정책으로 가상화를 진행하는지, 어떻게 효율적으로 진행하며 무슨 H/W 지원이 필요한가를 논해야한다.</p>
@@ -298,138 +303,54 @@
 <h2 id="THE-CRUX-OF-THE-PROBLEM-1"><a href="#THE-CRUX-OF-THE-PROBLEM-1" class="headerlink" title="THE CRUX OF THE PROBLEM"></a>THE CRUX OF THE PROBLEM</h2><p><strong>올바른 동시성 프로그램 작성하기</strong><br>같은 메모리를 공유하며 동시 실행되는 여러 쓰레드가 있을 때, 어떻게 올바른 프로그램을 빌드할 수 있을까? OS에서 어느 요소가 필요할까? H/W의 무슨 매커니즘이 제공되어야 할까? 우리는 어떻게 이러한 동시성 문제를 해결할 수 있을까?</p>
 <hr>
 <h2 id="지속성-Persistence"><a href="#지속성-Persistence" class="headerlink" title="지속성 (Persistence)"></a>지속성 (Persistence)</h2>
-        
-      
     </div>
 
     
     
     
+        
+      
+
       <footer class="post-footer">
-          <div class="post-eof"></div>
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/TIL/" rel="tag"><i class="fa fa-tag"></i> TIL</a>
+            
+              <a href="/tags/OS/" rel="tag"><i class="fa fa-tag"></i> OS</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/03/31/algo_time_complexity/" rel="next" title="Time Complexity">
+                  <i class="fa fa-chevron-left"></i> Time Complexity
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
         
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2020/03/31/algo_time_complexity/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="roamgom">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/roamgom.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="roamgom's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/03/31/algo_time_complexity/" class="post-title-link" itemprop="url">Time Complexity</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2020-03-31 18:24:08 / Modified: 19:50:26" itemprop="dateCreated datePublished" datetime="2020-03-31T18:24:08+09:00">2020-03-31</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="시간복잡도-Time-Complexity"><a href="#시간복잡도-Time-Complexity" class="headerlink" title="시간복잡도 (Time Complexity)"></a>시간복잡도 (Time Complexity)</h1><p>알고리즘 공부에서 절대 빠질 수 없는 요소가 바로 시간복잡도이다. 많은 코딩테스트에서도 따지는 부분이며, 실제 업무에도 많이 활용되기 때문에 시간복잡도는 최적화 공부에 도움이 되는 부분이다.</p>
-<blockquote>
-<p>인프런에서 무료로 강의를 제공하고 있다.<br>-&gt; <a href="https://www.inflearn.com/course/%EC%BD%94%EB%94%A9-%EC%9D%B8%ED%84%B0%EB%B7%B0/dashboard" target="_blank" rel="noopener">링크</a></p>
-</blockquote>
-<p>시간 복잡도(Time complexity)는 코드의 실행 시간을 측정하여 알고리즘의 효율을 따지는데 필요하다.</p>
-<p>아래 예제 코드를 보자.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_hello</span><span class="params">(number)</span>:</span></span><br><span class="line">    print(<span class="string">"원하는만큼 Hello 출력하기!"</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(number):</span><br><span class="line">        print(<span class="string">"Hello!"</span>)</span><br></pre></td></tr></table></figure>
-
-<p><code>print_hello</code> 함수는 인자로 입력받은 <code>number</code>만큼 Hello를 출력한다. 위 함수의 실행 횟수를 주석으로 적어보자.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_hello</span><span class="params">(number)</span>:</span></span><br><span class="line">    print(<span class="string">"원하는만큼 Hello 출력하기!"</span>) <span class="comment"># 1 번</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(number):</span><br><span class="line">        print(<span class="string">"Hello!"</span>)              <span class="comment"># N(number) 번</span></span><br></pre></td></tr></table></figure>
-
-<p>함수 실행시, 맨 처음 출력문은 한번만 실행되지만,<br><code>Hello!</code>를 출력하는 부분은 <code>for</code> loop문으로 묶여 있기 때문에 인자값 <code>number</code>에 따라 N번 횟수만큼 실행이된다.</p>
-<p>위의 실행시간를 수식으로 <strong>1+N</strong> 처럼 나타낼 수 있다.</p>
-<p>이러한 성능 분석을 수식처럼 표현하기 위해 사용되는 표기법을 점근 표기법이라고 하는데, O(빅오), Ω(오메가), ⍬(세타) 이렇게 3가지 방식이 있다. 알고리즘의 성능에서 여러 케이스를 나누어 측정하는데, <strong>best</strong>, <strong>average</strong>, <strong>worst</strong> 이렇게 3가지 케이스를 가지고 알고리즘의 성능을 판단한다.</p>
-<p>보통 O(빅오) 표기법을 많이 사용하며, <em>빅오 표기법은 최악의 경우로 계산한다</em>. 빅오 표기법에서 가장 흔히 사용되는 수식은 아래와 같다.</p>
-<p><img src="https://user-images.githubusercontent.com/24652225/78018401-c79e2c80-7388-11ea-84fb-383e5ad6e533.png" alt="시간복잡도 그래프"></p>
-<h3 id="Big-O-Notation"><a href="#Big-O-Notation" class="headerlink" title="Big-O Notation"></a>Big-O Notation</h3><ul>
-<li><strong>O(1) : 상수형 (constant)</strong></li>
-<li><strong>O(log N) : 로그형 (log)</strong></li>
-<li><strong>O(N) : 선형 (linear)</strong></li>
-<li><strong>O(N^2) : 제곱형 (quadratic)</strong></li>
-<li><strong>O(2^N) : 거듭제곱형 (power)</strong></li>
-<li><strong>O(N!) : 계승형 (factorial)</strong></li>
-</ul>
-<blockquote>
-<p>상수형이 가장 빠르며, 지수형에 가까워질수록 시간이 오래걸린다. 이를 통해, 작성한 코드의 효율을 확인할 수 있다.<br><strong>성능순서: O(1) &lt; O(logN) &lt; O(NlogN) &lt; O(N^2) &lt; O(2^N) &lt; O(N!)</strong></p>
-</blockquote>
-<h4 id="1-O-1-상수형-constant"><a href="#1-O-1-상수형-constant" class="headerlink" title="1. O(1) 상수형 (constant)"></a>1. O(1) 상수형 (constant)</h4><p>상수형은 오직 한 단계로만 실행된다.<br>데이터 양이 적든 많든 상관 없이 일정한 실행 시간이 필요하다.</p>
-<h4 id="2-O-log-N-로그형-log"><a href="#2-O-log-N-로그형-log" class="headerlink" title="2. O(log N) 로그형 (log)"></a>2. O(log N) 로그형 (log)</h4><p>logN 그래프를 보면 알겠지만, 데이터양이 많아져도 실행시간이 선형적으로 증가하는 것보다 훨씬 천천히 증가하고, 시간에 비례하다. 선형보다 데이터양이 2^N배 많으며, <strong>이진탐색(Binary Search)</strong>이 로그형 시간복잡도를 가진다.</p>
-<p>조금의 시간이 더 소요되지만,<br>정렬 알고리즘에서 <strong>퀵정렬(Quick Sort)</strong>, <strong>합병정렬(Merge Sort)</strong>이 O(N log N) 시간복잡도르 가진다. 정렬을 할 때, 모든 데이터를 작은 단위로 쪼개어 비교하며 조회하기 때문에, N배 더 많은 시간이 소모된다.</p>
-<h4 id="3-O-N-선형-linear"><a href="#3-O-N-선형-linear" class="headerlink" title="3. O(N) 선형 (linear)"></a>3. O(N) 선형 (linear)</h4><p>가장 보편적인 시간복잡도로, 데이터양과 시간이 정비례하다. 단일 <code>for</code>문과 같이 데이터 전체를 탐색하는 경우, 선형 복잡도를 가진다.</p>
-<h4 id="4-O-N-2-제곱형-quadratic"><a href="#4-O-N-2-제곱형-quadratic" class="headerlink" title="4. O(N^2) 제곱형 (quadratic)"></a>4. O(N^2) 제곱형 (quadratic)</h4><p>선형의 제곱만큼의 시간이 걸리며, 보통 2중 <code>for</code>문을 사용할 때 나타나는 시간복잡도이다. N값에 따라 시간이 매우 길어지며, 효율이 매우 떨어진다. 정렬 알고리즘에서는 <strong>삽입정렬(Insertion sort)</strong>, <strong>버블정렬(Bubble sort)</strong>가 있다.</p>
-<h4 id="5-O-2-N-거듭제곱형-power-O-N-계승형-factorial"><a href="#5-O-2-N-거듭제곱형-power-O-N-계승형-factorial" class="headerlink" title="5.O(2^N) 거듭제곱형 (power), O(N!) : 계승형 (factorial)"></a>5.O(2^N) 거듭제곱형 (power), O(N!) : 계승형 (factorial)</h4><p>제곱형부터 이미 시간복잡도가 급격하게 증가하기 때문에, 거듭제곱형과 계승형은 시간복잡도를 따지기에는 너무 큰 기울기를 가진다. 게승형은 심지어 화면에 표현할 수도 없을 정도로 증가하기 때문에.. <del>여기까지만 알아보자</del></p>
-<blockquote>
-<p>참고 출처<br><a href="https://en.wikipedia.org/wiki/Time_complexity" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Time_complexity</a><br><a href="https://blog.chulgil.me/algorithm/" target="_blank" rel="noopener">https://blog.chulgil.me/algorithm/</a></p>
-</blockquote>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
   </div>
-  
-  
-  
-  </article>
-
-    
-  </div>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
 
 
           </div>
@@ -448,6 +369,11 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc" data-target="post-toc-wrap">
@@ -460,6 +386,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OSTEP"><span class="nav-number">1.</span> <span class="nav-text">OSTEP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-Intro-Introduction-code"><span class="nav-number">2.</span> <span class="nav-text">01. Intro - Introduction code</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#THE-CRUX-OF-THE-PROBLEM"><span class="nav-number">2.1.</span> <span class="nav-text">THE CRUX OF THE PROBLEM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU-가상화-Virtualizing-the-CPU"><span class="nav-number">2.2.</span> <span class="nav-text">CPU 가상화 (Virtualizing the CPU)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#메모리-가상화-Virtualizing-Memory"><span class="nav-number">2.3.</span> <span class="nav-text">메모리 가상화 (Virtualizing Memory)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#동시실행-Concurrency"><span class="nav-number">2.4.</span> <span class="nav-text">동시실행(Concurrency)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#THE-CRUX-OF-THE-PROBLEM-1"><span class="nav-number">2.5.</span> <span class="nav-text">THE CRUX OF THE PROBLEM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#지속성-Persistence"><span class="nav-number">2.6.</span> <span class="nav-text">지속성 (Persistence)</span></a></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 

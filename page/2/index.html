@@ -202,6 +202,94 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2020/03/09/program_middleware/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="roamgom">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/roamgom.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="roamgom's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/03/09/program_middleware/" class="post-title-link" itemprop="url">Middleware</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-03-09 15:50:47 / Modified: 16:49:27" itemprop="dateCreated datePublished" datetime="2020-03-09T15:50:47+09:00">2020-03-09</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Middleware"><a href="#Middleware" class="headerlink" title="Middleware"></a>Middleware</h1><p>아래는 Wikipedia에서 Middleware에 대한 정의이다.</p>
+<blockquote>
+<p>Middleware is computer software that provides services to software applications beyond those available from the operating system.</p>
+</blockquote>
+<p>우리가 OS 위에서 소프트웨어를 실행하면 미들웨어는 해당 소프트웨어와 OS 사이에서 여러 서비스를 제공한다는 말인데</p>
+<p><a href="https://en.wikipedia.org/wiki/Middleware#/media/File:Linux_kernel_and_gaming_input-output_latency.svg" target="_blank" rel="noopener">Wikipedia 이미지</a> 를 보면 Linux 환경에서 게임을 실행했을 때, 일어나는 여러 이벤트 구조를 HW/SW 로 나누어진 걸 볼 수 있다. 여기서 미들웨어는 Linux kernel과 Game 사이에서 일어나는 Input, Output에 대한 처리를 해준다.</p>
+<p>우리가 흔히 접하는 미들웨어는 Database middleware, Application server middleware, Message-oriented middleware, Web middleware 등이 있다.</p>
+<p>Python 백엔드 공부를 하며 만난 <a href="https://gunicorn.org/" target="_blank" rel="noopener">Gunicorn</a>과 같은 WSGI 또한 미들웨어이다.</p>
+<blockquote>
+<p>스포카에서 WSGI에 대해 작성한 글 <a href="https://spoqa.github.io/2012/01/16/wsgi-and-flask.html" target="_blank" rel="noopener">링크</a></p>
+</blockquote>
+<p>OS를 포함한 전체적인 구조를 대강 그려본다면 아래와 같다.</p>
+<p><img src="https://user-images.githubusercontent.com/24652225/76192718-d9772e80-6225-11ea-96cc-bb52b7962246.png" alt="structure"></p>
+<hr>
+<p>가끔 듣는 펌웨어(Firmware)와 헷갈리는 부분도 있어서 찾아보았다.<br><a href="https://superuser.com/questions/707405/differences-between-firmware-and-middleware-and-device-driver" target="_blank" rel="noopener">Reference</a></p>
+<p>펌웨어는 주로 assembly 또는 C로 짜여져 있으며, 하드웨어 위에서 실행된다. 대표적인 예로, BIOS가 있다.</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2020/03/04/os/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -216,7 +304,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/03/04/os/" class="post-title-link" itemprop="url">OS</a>
+            <a href="/2020/03/04/os/" class="post-title-link" itemprop="url">OS (Three Easy Pieces)</a>
           
         </h1>
 
@@ -242,7 +330,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-24 18:13:01" itemprop="dateModified" datetime="2020-04-24T18:13:01+09:00">2020-04-24</time>
+                <time title="Modified: 2020-05-01 14:08:24" itemprop="dateModified" datetime="2020-05-01T14:08:24+09:00">2020-05-01</time>
               </span>
             
           
@@ -258,123 +346,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="OS"><a href="#OS" class="headerlink" title="OS"></a>OS</h1><p>이전에 학교에서 배웠던 교재를 기반으로 정리하기로 한다.</p>
-<p>재목은 Remzi H. 교수의 Operating Systems: Three Easy Pieces (이후 OSTEP으로 명칭)</p>
+          <h1 id="OS-Operating-System-정리"><a href="#OS-Operating-System-정리" class="headerlink" title="OS (Operating System) 정리"></a>OS (Operating System) 정리</h1><p>이전에 학교에서 배웠던 교재를 기반으로 정리하기로 했습니다.</p>
+<p>재목은 Remzi H. 교수의 <strong>Operating Systems: Three Easy Pieces</strong> (이후 OSTEP으로 명칭)</p>
 <p>모든 자료는 오픈되어 있으며</p>
-<p>아래 링크로 들어가면 모든 자료가 열람 가능하다.</p>
+<p>아래 링크로 들어가면 모든 자료가 열람 가능합니다.</p>
 <p><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank" rel="noopener">OSTEP</a></p>
-<p>각 페이지의 내용은 아래에 추가될 예정이며</p>
-<p>언제 올라올지는 나도 몰라</p>
 <hr>
 <h2 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h2><p>목차는 본 교재와 같은 순으로 구성되게끔 번역해볼 예정이며</p>
-<p>설명은 간결하게 정리해서 기재</p>
+<p>Dialogue는 링크로만 첨부, 각 챕터 별 내용을 정리하여 올릴 예정입니다.</p>
 <h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><h3 id="Virtualization"><a href="#Virtualization" class="headerlink" title="Virtualization"></a>Virtualization</h3><h3 id="Concurrency"><a href="#Concurrency" class="headerlink" title="Concurrency"></a>Concurrency</h3><h3 id="Persistence"><a href="#Persistence" class="headerlink" title="Persistence"></a>Persistence</h3><h3 id="Appendices"><a href="#Appendices" class="headerlink" title="Appendices"></a>Appendices</h3>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2020/03/03/python_decorator/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="roamgom">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/roamgom.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="roamgom's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/03/03/python_decorator/" class="post-title-link" itemprop="url">Python Decorator</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2020-03-03 15:00:18 / Modified: 17:01:24" itemprop="dateCreated datePublished" datetime="2020-03-03T15:00:18+09:00">2020-03-03</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Decorator"><a href="#Decorator" class="headerlink" title="Decorator"></a>Decorator</h1><p>파이썬으로 어느정도 작업하다보면 코드 중에 아래와 같은 형태로 된 코드를 볼 수 있다.<br>(아래는 Flask 예제)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Hello World!"</span></span><br></pre></td></tr></table></figure>
-
-<p>위의 <code>@app.route()</code>와 같은 형태를 Decorator라고 부른다.<br>Decorator를 사용하는 이유는 대상 함수를 다른 함수로 wrapping 하여 대상함수의 실행 전후에 추가적으로 실행을 하고 싶은 기능을 재사용 가능한 형태로 구현해준다.</p>
-<p>예를 들어, 웹 서비스를 만든다고 했을 때, 각 API마다 로그를 남기고 싶다고 하자.<br>필요한 기능을 로그인, 글쓰기, 사진올리기 총 3개의 함수로 나누어 생각할 때 각 함수마다 로그를 남기는 코드를 적용해줘야 한다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log_function</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="comment"># 로그 남기기</span></span><br><span class="line">    print(<span class="string">f"log: <span class="subst">&#123;func&#125;</span>"</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 로그인</span></span><br><span class="line">    <span class="comment"># 로그 함수 호출</span></span><br><span class="line">    log_function()</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">upload_post</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 글 업로드</span></span><br><span class="line">    <span class="comment"># 로그 함수 호출</span></span><br><span class="line">    log_function()</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">upload_photo</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 사진 업로드</span></span><br><span class="line">    <span class="comment"># 로그 함수 호출</span></span><br><span class="line">    log_function()</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<p>보통은 위와같이 로그를 남기는 함수를 선언하여 각 메소드 안에서 호출하겠지만 Decorator를 사용하면 아래와 같은 형태로도 가능하다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log_function</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="comment"># 로그 남기기</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper_function</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">        print(<span class="string">f"log: <span class="subst">&#123;func&#125;</span>"</span>)</span><br><span class="line">    <span class="keyword">return</span> wrapper_function</span><br><span class="line"></span><br><span class="line"><span class="meta">@log_function</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 로그인</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@log_function</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">upload_post</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 글 업로드</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@log_function</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">upload_photo</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 사진 업로드</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<p>Decorator를 사용할 경우 여러번 재사용 함으로써, 함수에 대한 가독성이 훨씬 좋아진 코드를 볼 수 있다. 또한, 같은 패턴을 사용해도 훨씬 더 간편한 코드 작성이 가능하다.</p>
-<p>Decorator에 대해 설명을 하자면,<br>Decorator 함수를 먼저 정의한 후, decorator를 적용시킬 함수를 인자로 받는다. decorator 함수 내부에는 nested 함수를 선언하여 여기에 추가 작업을 선언하여 사용하고 마지막으로 decorator 함수에서 해당 nested 함수를 반환해주면 된다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decoration_function</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="comment"># 데코레이터 함수</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper_function</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">        pre_handle()</span><br><span class="line">    <span class="keyword">return</span> wrapper_function</span><br><span class="line"></span><br><span class="line"><span class="meta">@decoration_function</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<p><code>func()</code> : 처리 함수<br><code>pre_handle()</code> : 추가 처리 코드<br><code>decoration_function()</code> : Decorator 함수 (호출용)<br><code>wrapper_function()</code> : 처리 함수를 감싸서 추가 처리를 하는 함수 (추가 처리)</p>
-<p>위와 같이 이해하면 된다.</p>
-<hr>
-<h2 id="Class-Decorator"><a href="#Class-Decorator" class="headerlink" title="Class Decorator"></a>Class Decorator</h2><p>클래스 형태로 Decorator를 정의할 수도 있다. 아래의 코드를 보자.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> wraps</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LogDecorator</span>:</span></span><br><span class="line">    <span class="comment"># 로그 Decorator</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, func)</span>:</span></span><br><span class="line">        self.func = func</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span><span class="params">(self, *args, **kwargs)</span>:</span></span><br><span class="line">        print(datetime.datetime.now())</span><br><span class="line">        self.func(self, *args, **kwargs)</span><br><span class="line">        print(datetime.datetime.now())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LogWithParamDecorator</span>:</span></span><br><span class="line">    <span class="comment"># 로그 w.파라미터  Decorator</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, *args, **kwargs)</span>:</span></span><br><span class="line">        self.type = kwargs[<span class="string">'type'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span><span class="params">(self, func, *args, **kwargs)</span>:</span></span><br><span class="line"><span class="meta">        @wraps(func)</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(*args, **kwargs)</span>:</span></span><br><span class="line">            print(<span class="string">f"Login type: <span class="subst">&#123;self.type&#125;</span>"</span>)</span><br><span class="line">            print(datetime.datetime.now())</span><br><span class="line">            result = func(*args, **kwargs)</span><br><span class="line">            print(datetime.datetime.now())</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> decorator</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainClass</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, id)</span>:</span></span><br><span class="line">        self.id = id</span><br><span class="line"></span><br><span class="line"><span class="meta">    @LogWithParamDecorator(type="user")</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">f"Login Success: <span class="subst">&#123;self.id&#125;</span>"</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @LogDecorator</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">upload_post</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"Post Success"</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @LogDecorator</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">upload_image</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"Image Success"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">main_function = MainClass(id=<span class="string">"bachbach"</span>)</span><br><span class="line">main_function.login()</span><br><span class="line">print()</span><br><span class="line">main_function.upload_post()</span><br><span class="line">print()</span><br><span class="line">main_function.upload_image()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> python main.py</span><br><span class="line">Login type: user</span><br><span class="line">2020-03-03 16:40:14.131477</span><br><span class="line">Login Success: bachbach</span><br><span class="line">2020-03-03 16:40:14.131504</span><br><span class="line"></span><br><span class="line">2020-03-03 16:40:14.131610</span><br><span class="line">Post Success</span><br><span class="line">2020-03-03 16:40:14.131626</span><br><span class="line"></span><br><span class="line">2020-03-03 16:40:14.131697</span><br><span class="line">Image Success</span><br><span class="line">2020-03-03 16:40:14.131707</span><br></pre></td></tr></table></figure>
-
-<p>위와 같이 2개의 클래스 Decorator를 만들었다.</p>
-<ul>
-<li><code>LogDecorator</code> : 로그 메시지 생성</li>
-<li><code>LogWithParamDecorator</code> : argument를 전달 받아 로그 메시지 생성</li>
-</ul>
-<p>위에서 <code>login()</code>의 경우 클래스를 생성했을 때 받은 <code>id</code>를 출력해준다. 또한, <code>LogWithParamDecorator</code>에서는 로그인한 사람의 유형을 출력하게끔 <code>@LogWithParamDecorator(type=&quot;user&quot;)</code> 형태로 argument를 전달하여 출력한다.</p>
-<p>이와 같이 Decorator는 정말 유용하게 쓰일 수 있다.</p>
-<hr>
-<p>설명이 정말 길다..<br><strong>제일 중요한 것, 그러면 왜 Decorator를 사용하는건가?</strong></p>
-<p>디버깅 또는 검증(로그인 검증 등), type check…<br>정말 많다 🙄</p>
-<p><a href="https://www.python.org/dev/peps/pep-0318/#motivation" target="_blank" rel="noopener">PEP-318</a>와 앞서 설명한 것과 같이 가독성과 직관성도 있지만,<br>STO에서 검색 중에 찾은 이유 중 한가지가 있다. <a href="https://stackoverflow.com/questions/489720/what-are-some-common-uses-for-python-decorators#comment41753979_489720" target="_blank" rel="noopener">링크</a><br>만약, Decorator를 실행할 때, 이미 실행된 적이 있을 경우, 캐시된 값이 반환된다는 것인데 얼마나 큰 영향을 주는지는 모르겠다.</p>
-<p>이미 재사용성이나 코드 가독성, 직관성만 해도 충분하지 않을까 😁</p>
-
         
       
     </div>
@@ -445,7 +425,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

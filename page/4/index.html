@@ -202,6 +202,96 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2020/03/03/python_iterator/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="roamgom">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/roamgom.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="roamgom's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/03/03/python_iterator/" class="post-title-link" itemprop="url">Python Iterator</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-03-03 13:27:33 / Modified: 14:44:34" itemprop="dateCreated datePublished" datetime="2020-03-03T13:27:33+09:00">2020-03-03</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h1><p>파이썬에서 list, set, dict와 같이 collection 형태를 가진 데이터 형은 for 문을 사용해 데이터를 하나씩 처리 가능하다. 이러한 것들을 Iterable Object라 한다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">number_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">string_list = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br><span class="line">string = <span class="string">"learningPython"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># a b c d</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> string_list:</span><br><span class="line">    print(i, end=<span class="string">" "</span>)</span><br><span class="line"></span><br><span class="line">str_iter = iter(string)</span><br><span class="line"></span><br><span class="line"><span class="comment"># l</span></span><br><span class="line">print(next(it))</span><br><span class="line"><span class="comment"># e</span></span><br><span class="line">print(next(it))</span><br><span class="line"><span class="comment"># a</span></span><br><span class="line">print(next(it))</span><br><span class="line"><span class="comment"># r</span></span><br><span class="line">print(next(it))</span><br><span class="line"><span class="comment"># n</span></span><br><span class="line">print(next(it))</span><br></pre></td></tr></table></figure>
+
+<p><code>iter()</code>는 파이썬 기본 내장함수로 Iterable Object의 iterator를 반환한다.<br>위의 코드는 iterator의 next 메소드를 통해 <code>str</code> 문자열의 문자를 하나씩 반환하여 출력하는 예제이다.</p>
+<blockquote>
+<p>만약 한 리스트에 대해 next 메소드를 사용하는 도중, 더이상 next element가 없으면 StopIteration Exception이 발생한다.</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"learningPython"</span></span><br><span class="line">str_iter = iter(string)</span><br><span class="line"></span><br><span class="line">dir(str_iter)</span><br><span class="line">[<span class="string">'__class__'</span>,</span><br><span class="line"> <span class="string">'__delattr__'</span>,</span><br><span class="line"> <span class="string">'__dir__'</span>,</span><br><span class="line"> <span class="string">'__doc__'</span>,</span><br><span class="line"> <span class="string">'__eq__'</span>,</span><br><span class="line"> <span class="string">'__format__'</span>,</span><br><span class="line"> <span class="string">'__ge__'</span>,</span><br><span class="line"> <span class="string">'__getattribute__'</span>,</span><br><span class="line"> <span class="string">'__gt__'</span>,</span><br><span class="line"> <span class="string">'__hash__'</span>,</span><br><span class="line"> <span class="string">'__init__'</span>,</span><br><span class="line"> <span class="string">'__init_subclass__'</span>,</span><br><span class="line"> <span class="string">'__iter__'</span>,</span><br><span class="line"> <span class="string">'__le__'</span>,</span><br><span class="line"> <span class="string">'__length_hint__'</span>,</span><br><span class="line"> <span class="string">'__lt__'</span>,</span><br><span class="line"> <span class="string">'__ne__'</span>,</span><br><span class="line"> <span class="string">'__new__'</span>,</span><br><span class="line"> <span class="string">'__next__'</span>,</span><br><span class="line"> <span class="string">'__reduce__'</span>,</span><br><span class="line"> <span class="string">'__reduce_ex__'</span>,</span><br><span class="line"> <span class="string">'__repr__'</span>,</span><br><span class="line"> <span class="string">'__setattr__'</span>,</span><br><span class="line"> <span class="string">'__setstate__'</span>,</span><br><span class="line"> <span class="string">'__sizeof__'</span>,</span><br><span class="line"> <span class="string">'__str__'</span>,</span><br><span class="line"> <span class="string">'__subclasshook__'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>iterator 객체는 위와 같은 메소드를 가지며, 주로 <code>__next__</code>, <code>__iter__</code> 가 가장 흔히 사용된다.</p>
+<ul>
+<li><p><code>__next__</code></p>
+<p>  Iterator 객체에서 다음 element를 가져오며, 파이썬 버전 상관 없이 <code>next(Object)</code> 로 호출 가능하다.</p>
+</li>
+<li><p><code>__iter__</code></p>
+<p>  Iterator 객체를 반환한다. Iterable Object를 for 문에 사용하면 해당 객체의 <code>__iter__()</code> 메소드를 호출하여 Iterator를 가져와 <code>__next__()</code> 메소드로 각 element를 가져오며 loop를 돈다.</p>
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2019/08/26/2019-08-26-hexo_blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -368,122 +458,6 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://roamgom.github.io/2019/06/10/project_manuscript/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="roamgom">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/roamgom.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="roamgom's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/10/project_manuscript/" class="post-title-link" itemprop="url">CNN을 활용한 비속어 탐지기</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-06-10 15:20:00" itemprop="dateCreated datePublished" datetime="2019-06-10T15:20:00+09:00">2019-06-10</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-27 00:12:18" itemprop="dateModified" datetime="2019-08-27T00:12:18+09:00">2019-08-27</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Manuscript"><a href="#Manuscript" class="headerlink" title="Manuscript"></a>Manuscript</h2><p>1-D CNN을 활용한 비속어 탐지기</p>
-<ul>
-<li>언어: Python</li>
-<li>주 패키지: Flask, Jamo, Lime, Pytorch</li>
-</ul>
-<blockquote>
-<p><del><a href="https://roamgom.github.io/manuscript/">Webpage</a></del>  (Currently not working)<br><a href="https://github.com/roamgom/manuscript" target="_blank" rel="noopener">Front page Github</a><br><a href="https://github.com/roamgom/manuscript_flask" target="_blank" rel="noopener">Back-End Github</a><br><a href="https://speakerdeck.com/roamgom/2019-1haggi-joleobjagpum-hyerebon" target="_blank" rel="noopener">결과물 발표자료</a></p>
-</blockquote>
-<h3 id="간단-설명"><a href="#간단-설명" class="headerlink" title="간단 설명"></a>간단 설명</h3><p>문장을 자음, 모음 단위로 나눠서 1-D CNN 형태에 맞춰 모델링 학습을 한 후,<br>이 모델을 통해 비속어가 포함되어 있는지 탐지.<br>결과는 <code>Lime</code>을 통해 보다 직관적이게 표현했으며,<br>API는 <code>Flask</code>, 프론트는 <code>Vue</code>와 <code>Github pages</code> 사용</p>
-<br>
-
-<p><img src="/images/project/manuscript/1d-cnn.png" alt></p>
-<p align="center" style="bold">
-    <a href="https://www.aclweb.org/anthology/D14-1181" target="_blank" rel="noopener">CNN for Sentence Classification by Yoon Kim</a>
-</p>
-
-<p><img src="/images/project/manuscript/flow.png" alt></p>
-<p align="center" style="bold">
-    전체 Flow
-</p>
-
-<p><img src="/images/project/manuscript/lime.png" alt></p>
-<p align="center" style="bold">
-    <a href="https://github.com/marcotcr/lime" target="_blank" rel="noopener">Python Lime</a>
-</p>
-
-<hr>
-<h3 id="결과물"><a href="#결과물" class="headerlink" title="결과물"></a>결과물</h3><p><img src="/images/project/manuscript/demo_1.gif" alt></p>
-<p align="center" style="bold">
-    Demo 1
-</p>
-
-<p><img src="/images/project/manuscript/demo_2.gif" alt></p>
-<p align="center" style="bold">
-    Demo 2
-</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
@@ -536,7 +510,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
